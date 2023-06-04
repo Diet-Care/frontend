@@ -4,6 +4,7 @@ import { setEmail, setMessage, setName } from "../redux/actions/action";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Form, Button, Container } from "react-bootstrap";
+import "../style/contactForm.css"
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const ContactForm = () => {
   
   return(
     <Container>
-      <h1>Contact</h1>
+      <h1>Kontak Kami</h1>
       <Row>
         <Col>
           <Form onSubmit={handleSubmit}>
