@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux'
-import { setEmail, setMessage, setName } from "../redux/actions/actions";
+import { setEmail, setMessage, setName } from "../redux/actions/action";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Form, Button, Container } from "react-bootstrap";
