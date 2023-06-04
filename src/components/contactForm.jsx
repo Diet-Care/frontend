@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from 'react-redux'
 import { setEmail, setMessage, setName } from "../redux/actions/actions";
 import Row from "react-bootstrap/Row";
