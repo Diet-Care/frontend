@@ -1,0 +1,25 @@
+/* hero */
+.hero-wrapper {
+  height: 100vh;
+  position: relative;
+}
+#btn-hero {
+  background-color: var(--primary-color);
+}
+
+#title {
+  font-family: var(--plus-jakarta-sans);
+  font-size: 56px;
+  color: var(--primary-color);
+}
+#description {
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  color: #a0a1a2;
+}
+/* hover */
+.hero #btn-hero:hover {
+  background: var(--secondary-color);
+}
+/* hover */
+/* hero */

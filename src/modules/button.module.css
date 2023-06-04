@@ -1,0 +1,50 @@
+.button-primary {
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+}
+.button-secondary {
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+}
+
+.button-select {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.144);
+  color: black;
+  font-weight: 600;
+  padding: 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+  outline: none;
+}
+
+.button-primary:hover {
+  background: var(--secondary-color);
+}
+
+.button-border {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  color: var(--primary-color);
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 00;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+}
+.button-border:hover {
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: white;
+}

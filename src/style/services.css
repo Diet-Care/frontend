@@ -1,0 +1,57 @@
+/* service */
+.services .col {
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+.services .col a {
+  text-decoration: none;
+}
+.services .col p {
+  width: 90%;
+  margin: auto;
+  font-weight: 300;
+}
+.services i {
+  width: 100px;
+  font-size: 48px;
+  color: var(--primary-color);
+}
+.services h1 {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.services p {
+  color: #a0a1a2;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 300;
+  font-size: 14px;
+}
+.services {
+  position: absolute;
+  bottom: -150px;
+  z-index: 1;
+  width: 100%;
+}
+/* hover */
+.services .col:hover {
+  background-color: var(--primary-color);
+}
+.services .col:hover i {
+  color: white;
+}
+.services .col:hover h1 {
+  color: white;
+}
+.services .col:hover p {
+  color: white;
+}
+/* hover */
+/* service */
