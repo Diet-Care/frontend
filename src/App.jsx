@@ -5,10 +5,12 @@ import Navigation from './components/navigation/Navigation';
 
 function App () {
   return (
-    <Container>
+    <>
       <Navigation />
-      <ContactForm />
-    </Container>
+      <Container>
+        <ContactForm />
+      </Container>
+    </>
   );
 };
 
