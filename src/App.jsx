@@ -3,6 +3,7 @@ import "./App.css";
 import Navigation from "./components/navigation/Navigation";
 import Container from "react-bootstrap/esm/Container";
 import Hero from "./components/Hero";
+import DetailOlahraga from "./components/detailOlahraga";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,7 +13,7 @@ function App() {
       <Navigation />
       <Container>
         <Hero/>
-        
+        <DetailOlahraga />
       </Container>
     </>
   );
