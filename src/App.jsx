@@ -12,7 +12,7 @@ function App() {
     <>
       <Navigation />
       <Container>
-        <Hero/>
+        {/* <Hero/> */}
         <DetailOlahraga />
       </Container>
     </>
