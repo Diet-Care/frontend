@@ -1,8 +1,39 @@
+import { useState } from "react";
 import "./styleLogin/login.css"
+import { login } from "../../redux/actionLogin/action";
+import { useDispatch, useSelector } from "react-redux";
 
-function Login(){
+//const root = ReactDOM.createRoot(
+   // document.getElementById('root')
+  //);
+
+  console.log(Login);
+function Login() {
+    const [username, setName] = useState('');
+    const [password, setPassword] = useState('');
+
+    const isLoading = useSelector((state) => state.login.isLoading);
+    const error = useSelector((state) => state.login.error);
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(login(username, password));
+
+        setName('')
+        setPassword('')
+    }
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    }
+
     return(
-        <>
+        
             <section className="login">
                 <div className="container">
                     <div className="login-wrapper">
@@ -15,10 +46,11 @@ function Login(){
                                         width="60%"
                                         className="img-logo mb-lg-5 mb-4 mx-auto"
                                     />
-                                    <form action="">
-                                        User Name<input type="text" id="username" />
-                                        Password<input type="password" id="password" />
-                                        <button id="loginBtn" type="submit">Login</button>
+                                    <form onSubmit={(e) => handleSubmit(e)}>
+                                        Username<input type="username" id="username" value={username} onChange={(e) => handleNameChange(e)}/>
+                                        Password<input type="password" id="password" value={password} onChange={(e) => handlePasswordChange(e)}/>
+                                        <button id="loginBtn" type="submit" disabled={isLoading}>{isLoading ? 'Loading...' : 'Login'}</button>
+                                        {error && <p>{error}</p>}
                                     </form>
                                 </div>
                             </div>
@@ -26,7 +58,7 @@ function Login(){
                     </div>
                 </div>
             </section>
-        </>
+        
     )
 }
 

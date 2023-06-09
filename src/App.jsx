@@ -1,4 +1,4 @@
-import ContactForm from "./components/contactForm";
+//import ContactForm from "./components/contactForm";
 import Login from "./components/login/Login";
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Login />
-      <ContactForm />
+     
     </>
   );
 }
