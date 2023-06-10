@@ -1,11 +1,12 @@
 import React from "react";
-import "../../../style/heroedukasi.css";1   
+import "../../../style/heroedukasi.css";
+
 
 const HeroEdukasi = () => {
   return (
     <div
     style={{
-      backgroundImage: 'url("https://i.ibb.co/BZnfssX/Hero.jpg")',
+      backgroundImage: 'url("https://i.ibb.co/LNZ8Fpx/Whats-App-Image-2023-06-10-at-18-27-39.jpg")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       minHeight: '100vh',
