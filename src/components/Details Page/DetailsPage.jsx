@@ -5,14 +5,21 @@ import "../../style/home-card.css";
 
 const DetailsPageDiet = () => {
   const { id } = useParams(); // Mengakses ID dari URL
-
-  const url = "https://647bcb83c0bae2880ad0413b.mockapi.io/pilihan-diet";
+  const url = "https://backend-production-2c47.up.railway.app/makanan";
   const [diet, setDiet] = useState([]);
-
   const getDataDiet = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setDiet(data);
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        const dataDiet = data.data;
+        setDiet(dataDiet);
+      } else {
+        console.error("Error fetching data:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   useEffect(() => {
@@ -23,14 +30,14 @@ const DetailsPageDiet = () => {
     <div>
       <h2>Halaman Details Diet dengan ID: {id}</h2>
       {diet
-        .filter((diet) => diet.id === id)
+        .filter((diet) => diet.uuid === id)
         .map((diet) => (
-          <div className="col-12" key={diet.id}>
+          <div className="col-12" key={diet.uuid}>
             <CardDiet
-              title={diet.title}
-              description={diet.deskripsi}
-              image={diet.image}
-              id={diet.id}
+              title={diet.judul_makanan}
+              description={diet.deskripsi_lengkap}
+              image={diet.img_makanan}
+              id={diet.uuid}
             />
           </div>
         ))}
@@ -40,6 +47,7 @@ const DetailsPageDiet = () => {
 
 function CardDiet(props) {
   return (
+    // rubah style nya pada bagian ini
     <Card className="card">
       <Card.Img className="card-image" src={props.image} />
       <Card.Body className="text">
