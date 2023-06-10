@@ -5,12 +5,13 @@ import AllDiet from "./pages/AllDiet";
 import DetailsPageDiet from "./components/RekomendasiDIet/DetailsPageDiet";
 import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<AdminPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
