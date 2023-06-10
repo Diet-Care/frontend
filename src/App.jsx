@@ -1,3 +1,10 @@
+
+import { useState } from "react";
+import "./App.css";
+import Navigation from "./components/navigation/Navigation";
+import Container from "react-bootstrap/esm/Container";
+import Hero from "./components/Hero";
+import DetailOlahraga from "./components/detailOlahraga";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
@@ -6,8 +13,18 @@ import DetailsPageDiet from "./components/RekomendasiDIet/DetailsPageDiet";
 import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
 
+
 function App() {
   return (
+
+    <>
+      <Navigation />
+      <Container>
+        {/* <Hero/> */}
+        <DetailOlahraga />
+      </Container>
+    </>
+
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
