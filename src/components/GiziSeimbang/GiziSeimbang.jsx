@@ -1,6 +1,6 @@
 import React from "react";
-import '../style/gizi-seimbang.css'
-import Button from "./Button";
+import "../../style/gizi-seimbang.css";
+import Button from "../Button";
 
 const GiziSeimbang = () => {
   return (
@@ -14,7 +14,7 @@ const GiziSeimbang = () => {
           meningkatkan risiko kekurangan atau kelebihan gizi yang dapat
           berdampak negatif pada kesehatan
         </p>
-        <Button variant='btnBorder'>Lihat Lebih Banyak</Button>
+        <Button variant="btnBorder">Lihat Lebih Banyak</Button>
       </div>
     </div>
   );

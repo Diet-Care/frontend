@@ -1,6 +1,6 @@
 import React from "react";
-import '../style/about.css'
-import Button from "./Button";
+import "../../style/about.css";
+import Button from "../Button";
 
 const AboutUs = () => {
   return (
@@ -30,7 +30,10 @@ const AboutUs = () => {
               bertujuan untuk mendorong penerapan kebiasaan makan dan minum yang
               lebih sehat dan berkelanjutan.
             </p>
-            <Button>Lihat Lebih Lanjut<i class="fa-solid fa-arrow-right text-white ms-2"></i></Button>
+            <Button>
+              Lihat Lebih Lanjut
+              <i class="fa-solid fa-arrow-right text-white ms-2"></i>
+            </Button>
           </div>
         </div>
       </div>

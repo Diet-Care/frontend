@@ -1,17 +1,17 @@
 import React from "react";
-import Hero from "./hero";
-import ServiceContent from "./ServiceContent";
-import RekomendasiDiet from "./RekomendasiDiet";
-import RekomendasiMakanan from "./RekomendasiMakanan";
-import RekomendasiOlahraga from "./RekomendasiOlahraga";
-import AboutUs from "./AboutUs";
-import GiziSeimbang from "./GiziSeimbang";
+import Hero from "./Hero/Hero";
+import RekomendasiDiet from "./RekomendasiDIet/RekomendasiDiet";
+import AboutUs from "./AboutUs/AboutUs";
+import GiziSeimbang from "./GiziSeimbang/GiziSeimbang";
+import ServiceContent from "./Services/ServiceContent";
+import RekomendasiMakanan from "./RekomendasiMakanan/RekomendasiMakanan";
+import RekomendasiOlahraga from "./RekomendasiOlahraga/RekomendasiOlahraga";
 
 const Home = () => {
   return (
     <>
       <Hero />
-        <ServiceContent />
+      <ServiceContent />
       <div className="diet">
         <RekomendasiDiet />
       </div>

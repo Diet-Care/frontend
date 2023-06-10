@@ -3,11 +3,6 @@
   padding: 100px 0;
   width: 100%;
 }
-.makanan .header-makanan .text {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-}
 
 .makanan .content {
   display: flex;
@@ -16,11 +11,11 @@
 }
 
 .makanan .content .col .card a {
-  display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
-  margin-top: 30px;
-  font-size: 14px;
+  display: flex !important;
+  justify-content: flex-end !important;
+  text-decoration: none !important;
+  margin-top: 30px !important;
+  font-size: 14px !important;
 }
 .makanan .card img {
   height: 200px;
@@ -40,7 +35,7 @@
 
 .makanan .header-makanan {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
 .makanan .header-makanan .lihat-detail {
   display: flex;
@@ -102,15 +97,6 @@
   justify-content: flex-end;
 }
 
-.makanan .content .card a {
-  color: white;
-  font-family: var(--plus-jakarta-sans);
-  font-size: 14px;
-  padding: 8px 14px;
-  width: fit-content;
-  background-color: var(--primary-color);
-  border-radius: 10px;
-}
 .makanan .btn-makanan button {
   background: var(--primary-color);
   border: 1px solid #56c4f2;
@@ -125,9 +111,6 @@
 .makanan .header-makanan .lihat-detail:hover h3,
 .makanan .header-makanan .lihat-detail:hover i {
   color: var(--secondary-color);
-}
-.makanan .content .card a:hover {
-  background-color: var(--third-color);
 }
 
 /* hover */

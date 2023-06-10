@@ -36,7 +36,7 @@
 }
 .services {
   position: absolute;
-  bottom: -150px;
+  bottom: -100px;
   z-index: 1;
   width: 100%;
 }

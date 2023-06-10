@@ -52,17 +52,6 @@
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
-.diet .content .card a {
-  color: white;
-  font-family: var(--plus-jakarta-sans);
-  font-size: 14px;
-  padding: 8px 14px;
-  width: fit-content;
-  background-color: var(--primary-color);
-  border-radius: 10px;
-  text-decoration: none;
-  margin-top: 10px;
-}
 .diet .content .card .text .link {
   width: 100%;
   display: flex;
@@ -72,25 +61,5 @@
   display: flex;
   justify-content: center;
 }
-.diet .btn-diet button {
-  background: var(--primary-color);
-  border: 1px solid #56c4f2;
-  border-radius: 12px;
-  color: white;
-  padding: 12px 24px;
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 60px;
-}
-
-/* hover */
-.diet .btn-diet button:hover {
-  background: var(--secondary-color);
-}
-.diet .content .card a:hover {
-  color: white;
-  background-color: var(--third-color);
-}
-/* hover */
 
 /* rekomendasi diet */

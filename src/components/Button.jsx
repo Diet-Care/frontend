@@ -5,6 +5,7 @@ const buttonTypes = {
   primary: "primary",
   secondary: "secondary",
   btnBorder: "border",
+  btnLainnya: "lainnya"
 };
 
 function getButtonClassName(variant) {

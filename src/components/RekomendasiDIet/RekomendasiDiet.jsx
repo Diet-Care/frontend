@@ -1,9 +1,14 @@
 import React from "react";
-import "../style/rekomendasi-diet.css";
+import "../../style/rekomendasi-diet.css";
 import RekomendasiDietCard from "./RekomendasiDietCard";
-import Button from "./Button";
+import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 
 const RekomendasiDiet = () => {
+  const navigate = useNavigate();
+  const handleLihatDietLainnya = () => {
+    navigate("/alldiet");
+  };
   return (
     <div className="container">
       <div class="diet-wrapper" id="diet">
@@ -20,8 +25,12 @@ const RekomendasiDiet = () => {
         </div>
         <div class="row gap-0 g-4 content mt-lg-0 mt-2">
           <RekomendasiDietCard />
-          <div class="btn-diet">
-            <Button variant="primary" children="Lihat Diet Lainnya" />
+          <div class="btn-diet mt-5">
+            <Button
+              variant="primary"
+              children="Lihat Diet Lainnya"
+              onClick={handleLihatDietLainnya}
+            />
           </div>
         </div>
       </div>
