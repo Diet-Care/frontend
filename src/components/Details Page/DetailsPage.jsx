@@ -12,8 +12,7 @@ const DetailsPageDiet = () => {
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        const dataDiet = data.data;
-        setDiet(dataDiet);
+        setDiet(data.data);
       } else {
         console.error("Error fetching data:", response.statusText);
       }
@@ -34,9 +33,9 @@ const DetailsPageDiet = () => {
         .map((diet) => (
           <div className="col-12" key={diet.uuid}>
             <CardDiet
-              title={diet.judul_makanan}
+              title={diet.judul}
               description={diet.deskripsi_lengkap}
-              image={diet.img_makanan}
+              image={diet.img}
               id={diet.uuid}
             />
           </div>

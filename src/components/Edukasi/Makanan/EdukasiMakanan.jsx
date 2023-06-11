@@ -10,8 +10,7 @@ const EdukasiMakanan = () => {
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        const dataDiet = data.data;
-        setDiet(dataDiet);
+        setDiet(data.data);
       } else {
         console.error("Error fetching data:", response.statusText);
       }

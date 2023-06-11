@@ -16,7 +16,7 @@ function App() {
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
-        <Route path="/details/:id" element={<DetailsPageDiet />} />{" "}
+        <Route path="/details/:id" element={<DetailsPageDiet />} />
         {/* Tambahkan route untuk details */}
       </Routes>
     </Router>
