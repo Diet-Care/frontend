@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "../../../style/home-card.css";
 import CardMap from "../../Card/CardMap";
 
-const EdukasiMakanan = () => {
-  const url = "https://backend-production-2c47.up.railway.app/makanan";
+const EdukasiOlahraga = () => {
+  const url = "https://backend-production-2c47.up.railway.app/olahraga";
   const [cards, setDiet] = useState([]);
   const getDataDiet = async () => {
     try {
@@ -24,7 +24,7 @@ const EdukasiMakanan = () => {
   }, []);
   return (
     <div className="mt-5">
-      <h1>Edukasi Makanan</h1>
+      <h1>Edukasi Olahraga</h1>
       <div class="row gap-0 g-4 content mt-lg-0 mt-2">
         <CardMap cards={cards} />;
       </div>
@@ -32,4 +32,4 @@ const EdukasiMakanan = () => {
   );
 };
 
-export default EdukasiMakanan;
+export default EdukasiOlahraga;
