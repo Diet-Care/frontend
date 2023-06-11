@@ -3,13 +3,14 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import {CgProfile} from "react-icons/cg"
+import {CgProfile} from "react-icons/cg";
+import "../../style/navigation.css";
 
-const Navigation = () => {
+function Navigation() {
   return (
-    <Navbar expand="lg">
+    <Navbar className="mx-1" expand="lg">
       <Container>
-        <Navbar.Brand href="#"><a><img src="https://i.ibb.co/mCXdQKm/logo-no-background.png" alt="logo-no-background" border="0" width={60} height={30}/></a></Navbar.Brand>
+        <Navbar.Brand href="#"><a><img src="https://i.ibb.co/mCXdQKm/logo-no-background.png" alt="logo-no-background" border="0" width={80} height={30} /></a></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -28,16 +29,15 @@ const Navigation = () => {
               type="search"
               placeholder="Search"
               className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="primary">Search</Button>
+              aria-label="Search" />
+            <Button className="button-primary">Search</Button>
           </Form>
           <Nav className="ml-auto">
-            <Nav.Link href="#profile"><CgProfile/></Nav.Link>
+            <Nav.Link href="#profile"><CgProfile size={40} /></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
+}
 export default Navigation;
