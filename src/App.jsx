@@ -10,22 +10,23 @@ import Container from "react-bootstrap/Container";
 import Hero from "./components/Hero";
 import DetailOlahraga from "./components/detailOlahraga";
 import "./App.css";
+import HitungKaloriPage from "./pages/HitungKaloriPage";
+import { NormalKalori, RendahKalori, TinggiKalori } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
+
 
 function App() {
   return (
     <Router>
-      <Navigation />
-      <Container>
-        {/* <Hero/> */}
-        <DetailOlahraga />
-      </Container>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HitungKaloriPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
         <Route path="/details/:id" element={<DetailsPageDiet />} />
+        <Route path="/tinggi" element={<TinggiKalori/>} />
+        <Route path="/normal" element={<NormalKalori/>} />
+        <Route path="/rendah" element={<RendahKalori/>} />
         {/* Tambahkan route untuk details */}
       </Routes>
     </Router>
