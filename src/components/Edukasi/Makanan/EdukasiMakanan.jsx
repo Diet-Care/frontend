@@ -10,8 +10,7 @@ const EdukasiMakanan = () => {
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        const dataDiet = data.data;
-        setDiet(dataDiet);
+        setDiet(data.data);
       } else {
         console.error("Error fetching data:", response.statusText);
       }
@@ -23,7 +22,14 @@ const EdukasiMakanan = () => {
   useEffect(() => {
     getDataDiet();
   }, []);
-  return <CardMap cards={cards} />;
+  return (
+    <div className="mt-5">
+      <h1>Edukasi Makanan</h1>
+      <div class="row gap-0 g-4 content mt-lg-0 mt-2">
+        <CardMap cards={cards} />;
+      </div>
+    </div>
+  );
 };
 
 export default EdukasiMakanan;

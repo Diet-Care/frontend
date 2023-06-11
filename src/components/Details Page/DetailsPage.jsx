@@ -7,17 +7,31 @@ import Navigation from "../Navigation/Navigation";
 
 const DetailsPageDiet = () => {
   const { id } = useParams(); // Mengakses ID dari URL
-  const url = "https://backend-production-2c47.up.railway.app/makanan";
-  const [diet, setDiet] = useState([]);
+  const urlMakanan = "https://backend-production-2c47.up.railway.app/makanan";
+  const urlOlahraga = "https://backend-production-2c47.up.railway.app/olahraga";
+  const [diet, setDiet] = useState(null);
+
   const getDataDiet = async () => {
     try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        const dataDiet = data.data;
-        setDiet(dataDiet);
+      const responseMakanan = await fetch(urlMakanan);
+      const responseOlahraga = await fetch(urlOlahraga);
+
+      if (responseMakanan.ok && responseOlahraga.ok) {
+        const dataMakanan = await responseMakanan.json();
+        const dataOlahraga = await responseOlahraga.json();
+
+        const idMakanan = dataMakanan.data.find((item) => item.uuid === id);
+        const idOlahraga = dataOlahraga.data.find((item) => item.uuid === id);
+
+        if (idMakanan) {
+          setDiet(idMakanan);
+        } else if (idOlahraga) {
+          setDiet(idOlahraga);
+        } else {
+          console.error("Data not found for the given ID");
+        }
       } else {
-        console.error("Error fetching data:", response.statusText);
+        console.error("Error fetching data");
       }
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -27,6 +41,10 @@ const DetailsPageDiet = () => {
   useEffect(() => {
     getDataDiet();
   }, []);
+
+  if (!diet) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
