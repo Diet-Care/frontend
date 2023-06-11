@@ -5,11 +5,15 @@ import AllDiet from "./pages/AllDiet";
 import DetailsPageDiet from "./components/RekomendasiDIet/DetailsPageDiet";
 import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
+
+import AdminPage from "./pages/AdminPage";
+
 import Navigation from "./components/navigation/Navigation";
 import Container from "react-bootstrap/Container";
 import Hero from "./components/Hero";
 import DetailOlahraga from "./components/detailOlahraga";
 import "./App.css";
+
 
 function App() {
   return (
@@ -20,7 +24,7 @@ function App() {
         <DetailOlahraga />
       </Container>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<AdminPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
