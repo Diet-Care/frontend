@@ -6,12 +6,15 @@
 
 #title {
   font-family: var(--plus-jakarta-sans);
-  font-size: 56px;
-  color: var(--primary-color);
+  font-size: 50px;
+  color: #a0a1a2;
+  padding-top: 10%;
 }
+
 #description {
   font-family: "Plus Jakarta Sans";
-  font-size: 18px;
+  font-size: 14px;
   color: #a0a1a2;
+  text-align: justify;
 }
 /* hero */
