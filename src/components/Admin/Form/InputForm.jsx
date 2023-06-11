@@ -23,6 +23,19 @@ function InputForm() {
       return;
     }
 
+    if (
+      judul === "" ||
+      deskripsiSingkat === "" ||
+      deskripsiLengkap === "" ||
+      tips === "" ||
+      img === null ||
+      jumlahKalori === "" ||
+      level === ""
+    ) {
+      setErrorMessage("Isi semua field yang diperlukan");
+      return;
+    }
+
     // Menentukan URL berdasarkan kategori yang dipilih
     let url = "";
     if (kategori === "makanan") {
@@ -154,12 +167,16 @@ function InputForm() {
           </div>
           <div className="form-group">
             <label htmlFor="level">Level:</label>
-            <input
-              type="text"
+            <select
               id="level"
               value={level}
               onChange={(e) => setLevel(e.target.value)}
-            />
+            >
+              <option value="">Pilih Level</option>
+              <option value="rendah">Rendah</option>
+              <option value="normal">Normal</option>
+              <option value="tinggi">Tinggi</option>
+            </select>
           </div>
         </div>
         <Button variant="primary" type="submit">
