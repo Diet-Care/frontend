@@ -3,9 +3,6 @@
   height: 100vh;
   position: relative;
 }
-#btn-hero {
-  background-color: var(--primary-color);
-}
 
 #title {
   font-family: var(--plus-jakarta-sans);
@@ -17,9 +14,4 @@
   font-size: 18px;
   color: #a0a1a2;
 }
-/* hover */
-.hero #btn-hero:hover {
-  background: var(--secondary-color);
-}
-/* hover */
 /* hero */
