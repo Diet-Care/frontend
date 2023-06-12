@@ -5,26 +5,18 @@ import AllDiet from "./pages/AllDiet";
 import DetailsPageDiet from "./components/Details Page/DetailsPage";
 import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
-import Edukasi from "./components/Edukasi/Edukasi";
 
 import AdminPage from "./pages/AdminPage";
 import EditMakanan from "./components/Admin/EditData/EditMakanan";
 import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
 
-import Navigation from "./components/navigation/Navigation";
-import Container from "react-bootstrap/Container";
-import Hero from "./components/Hero";
-import DetailOlahraga from "./components/detailOlahraga";
 import "./App.css";
-
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Edukasi />} />
         <Route path="/" element={<AdminPage />} />
-
         <Route path="/about" element={<About />} />
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
