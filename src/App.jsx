@@ -20,11 +20,6 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <Navigation />
-      <Container>
-        {/* <Hero/> */}
-        <DetailOlahraga />
-      </Container>
       <Routes>
         <Route path="/" element={<AdminPage />} />
         <Route path="/about" element={<About />} />
