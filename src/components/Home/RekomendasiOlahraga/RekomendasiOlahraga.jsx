@@ -1,8 +1,8 @@
 import React from "react";
-import '../../style/rekomendasi-olahraga.css'
+import '../../../style/rekomendasi-olahraga.css'
 import RekomendasiOlahragaCard from "./RekomendasiOlahragaCard";
 import { useNavigate } from "react-router-dom";
-import Button from "../Button";
+import Button from "../../Button";
 
 const RekomendasiOlahraga = () => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const RekomendasiOlahraga = () => {
             </Button>
           </div>
         </div>
-        <div class="row gap-0 g-4 content mt-lg-0 mt-2">
+        <div class="row gap-4 g-4 content mt-lg-0 mt-2">
           <RekomendasiOlahragaCard />
         </div>
       </div>

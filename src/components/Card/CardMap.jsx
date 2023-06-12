@@ -9,11 +9,11 @@ const CardMap = ({ cards }) => {
       {cards.map((item) => (
         <div className="col card-wrapper" key={item.uuid}>
           <Card className="card">
-            <Card.Img className="card-image" src={item.img} />
+            <div className="img-wrapper">
+              <Card.Img className="card-image" src={item.img} />
+            </div>
             <Card.Body className="text">
-              <Card.Title className="card-title">
-                {item.judul}
-              </Card.Title>
+              <Card.Title className="card-title">{item.judul}</Card.Title>
               <Card.Text className="card-deskripsi">
                 {item.deskripsi_lengkap}
               </Card.Text>

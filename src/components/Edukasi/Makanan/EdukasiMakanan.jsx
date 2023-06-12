@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../../style/home-card.css";
+import "../style/edukasi.css"
 import CardMap from "../../Card/CardMap";
 
 const EdukasiMakanan = () => {
@@ -23,9 +24,9 @@ const EdukasiMakanan = () => {
     getDataDiet();
   }, []);
   return (
-    <div className="mt-5">
-      <h1>Edukasi Makanan</h1>
-      <div class="row gap-0 g-4 content mt-lg-0 mt-2">
+    <div className="pt-3 edukasi">
+      <h1 className="text-center">Kadar Kandungan Gizi Makanan Sehat</h1>
+      <div class="edukasi-layout gap-4 g-4 content mt-lg-0 pt-5">
         <CardMap cards={cards} />;
       </div>
     </div>

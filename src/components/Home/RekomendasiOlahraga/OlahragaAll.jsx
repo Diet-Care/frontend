@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import "../../../style/home-card.css";
 import CardMap from "../../Card/CardMap";
-import "../style/edukasi.css";
+import Navigation from "../../Navigation";
 
-
-const EdukasiOlahraga = () => {
+const OlahragaAll = () => {
   const url = "https://backend-production-2c47.up.railway.app/olahraga";
   const [cards, setDiet] = useState([]);
   const getDataDiet = async () => {
@@ -25,13 +24,15 @@ const EdukasiOlahraga = () => {
     getDataDiet();
   }, []);
   return (
-    <div className=" edukasi pt-4">
-      <h1 className="text-center">Rekomendasi Olahraga</h1>
-      <div class="edukasi-layout gap-4 g-4 content mt-lg-0 pt-5">
-        <CardMap cards={cards} />;
+    <>
+      <Navigation />
+      <div className="container">
+        <div class="row gap-4 g-4 content mt-lg-0 mt-2">
+          <CardMap cards={cards} />;
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default EdukasiOlahraga;
+export default OlahragaAll;
