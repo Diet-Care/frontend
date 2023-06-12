@@ -1,7 +1,7 @@
 import React from "react";
 import EdukasiMakanan from "./Makanan/EdukasiMakanan";
 import HeroEdukasi from "./Hero/Hero";
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation";
 import EdukasiOlahraga from "./Olahraga/EdukasiOlahraga";
 
 const Edukasi = () => {

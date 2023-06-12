@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import "../../style/home-card.css";
 import "../../style/herodetails.css";
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation";
 
 const DetailsPageDiet = () => {
   const { id } = useParams(); // Mengakses ID dari URL

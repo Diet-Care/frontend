@@ -11,7 +11,7 @@
   position: absolute;
   top: auto;
   left: auto;
-  width: 100%;
+  width: auto;
   height: 450px;
   background-color: rgba(0, 0, 0, 0.3); /* Sesuaikan dengan kegelapan yang diinginkan */
 }

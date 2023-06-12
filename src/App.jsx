@@ -9,7 +9,7 @@ import Edukasi from "./components/Edukasi/Edukasi";
 
 import AdminPage from "./pages/AdminPage";
 
-import Navigation from "./components/navigation/Navigation";
+import Navigation from "../src/components/Navigation";
 import Container from "react-bootstrap/Container";
 import Hero from "./components/Hero";
 import DetailOlahraga from "./components/detailOlahraga";
@@ -19,11 +19,11 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <Navigation />
-      <Container>
+      {/* <Navigation /> */}
+      {/* <Container> */}
         {/* <Hero/> */}
-        <DetailOlahraga />
-      </Container>
+        {/* <DetailOlahraga /> */}
+      {/* </Container> */}
       <Routes>
         <Route path="/" element={<Edukasi />} />
         <Route path="/" element={<AdminPage />} />
