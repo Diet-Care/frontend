@@ -1,7 +1,7 @@
 .button-primary {
   border: none;
   background-color: var(--primary-color);
-  color: var(--primary-color);
+  color: white;
   font-weight: 600;
   padding: 10px 24px;
   border-radius: 8px;
