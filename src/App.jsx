@@ -17,6 +17,7 @@ import {
   TinggiKalori,
 } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
 import AboutUs from "./components/AboutUs/AboutUs";
+import EdukasiPage from "./pages/EdukasiPage";
 function App() {
   return (
     <Router>
@@ -24,7 +25,7 @@ function App() {
 
         <Route path="/" element={<HomePage />} />
         <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
-        <Route path="/edukasi" element={<Edukasi />} />
+        <Route path="/edukasi" element={<EdukasiPage />} />
         <Route path="/contact" element={<AdminPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/alldiet" element={<AllDiet />} />
