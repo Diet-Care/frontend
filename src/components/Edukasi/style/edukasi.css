@@ -1,0 +1,13 @@
+.edukasi h1{
+    font-weight: 600;
+font-size: 40px;
+color: var(--primary-color);
+margin-top: 50px;
+}
+.edukasi-layout{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr); /* mengatur 4 kolom dengan lebar yang sama */
+  gap: 10px;
+  width: 100%;
+}
+
