@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function Edit() {
+function EditOlahraga() {
   const { uuid } = useParams();
   const [data, setData] = useState({});
   const [judul, setJudul] = useState("");
@@ -16,7 +16,7 @@ function Edit() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://backend-production-2c47.up.railway.app/makanan/${uuid}`
+        `https://backend-production-2c47.up.railway.app/olahraga/${uuid}`
       );
       const result = await response.json();
       const item = result.data;
@@ -40,7 +40,7 @@ function Edit() {
       formData.append("img", img);
 
       const response = await fetch(
-        `https://backend-production-2c47.up.railway.app/makanan/${uuid}`,
+        `https://backend-production-2c47.up.railway.app/olahraga/${uuid}`,
         {
           method: "PUT",
           body: formData,
@@ -65,7 +65,7 @@ function Edit() {
 
   return (
     <div>
-      <h1>Edit Data</h1>
+      <h1>Edit Data Olahraga</h1>
 
       <div className="edit-form">
         <label htmlFor="judul">Judul:</label>
@@ -90,6 +90,7 @@ function Edit() {
           onChange={(e) => setDeskripsiLengkap(e.target.value)}
         />
         <label htmlFor="img-upload">Gambar (JPG atau WebP):</label>
+        {img && <img src={img} alt="Gambar" width="100%" />}
         <input
           type="file"
           accept=".jpg, .webp"
@@ -105,4 +106,4 @@ function Edit() {
   );
 }
 
-export default Edit;
+export default EditOlahraga;

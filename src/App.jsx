@@ -6,6 +6,8 @@ import DetailsPageDiet from "./components/RekomendasiDIet/DetailsPageDiet";
 import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
 import AdminPage from "./pages/AdminPage";
+import EditMakanan from "./components/Admin/EditData/EditMakanan";
+import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
         <Route path="/details/:id" element={<DetailsPageDiet />} />
+        <Route path="/edit-makanan/:uuid" element={<EditMakanan />} />
+        <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} />
         {/* Tambahkan route untuk details */}
       </Routes>
     </Router>

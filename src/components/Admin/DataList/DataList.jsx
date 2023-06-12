@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../style/data-list.css";
 
-function DataList({ url }) {
+function DataList({ url, category }) {
   const [data, setData] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -47,6 +47,15 @@ function DataList({ url }) {
     }
   };
 
+  const getEditURL = (uuid) => {
+    if (category === "makanan") {
+      return `/edit-makanan/${uuid}`;
+    } else if (category === "olahraga") {
+      return `/edit-olahraga/${uuid}`;
+    }
+    return "";
+  };
+
   return (
     <div>
       <h1 className="data-title">Data</h1>
@@ -62,9 +71,14 @@ function DataList({ url }) {
                 <p className="text-judul">{item.judul}</p>
               </div>
               <div className="button-edit">
-                <Link to={`/edit/${item.uuid}`} className="edit-button">
-                  Edit
-                </Link>
+                <button>
+                  <Link
+                    to={getEditURL(item.uuid)}
+                    className="text-white edit-button"
+                  >
+                    Edit
+                  </Link>
+                </button>
                 <button
                   className="delete-button"
                   onClick={() => handleDelete(item.uuid)}
@@ -86,10 +100,10 @@ function DataListMakanan() {
   const urlMakanan = "https://backend-production-2c47.up.railway.app/makanan";
 
   return (
-    <div className="container  ">
+    <div className="container">
       <h1>Data List Makanan</h1>
       <div className="list-wrapper">
-        <DataList url={urlMakanan} />
+        <DataList url={urlMakanan} category="makanan" />
       </div>
     </div>
   );
@@ -102,7 +116,7 @@ function DataListOlahraga() {
     <div className="container">
       <h1>Data List Olahraga</h1>
       <div className="list-wrapper">
-        <DataList url={urlOlahraga} />
+        <DataList url={urlOlahraga} category="olahraga" />
       </div>
     </div>
   );

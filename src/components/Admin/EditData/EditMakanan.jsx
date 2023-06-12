@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function Edit() {
+function EditMakanan() {
   const { uuid } = useParams();
   const [data, setData] = useState({});
   const [judul, setJudul] = useState("");
@@ -90,6 +90,7 @@ function Edit() {
           onChange={(e) => setDeskripsiLengkap(e.target.value)}
         />
         <label htmlFor="img-upload">Gambar (JPG atau WebP):</label>
+        {img && <img src={img} alt="Gambar" width="100%" />}
         <input
           type="file"
           accept=".jpg, .webp"
@@ -105,4 +106,4 @@ function Edit() {
   );
 }
 
-export default Edit;
+export default EditMakanan;
