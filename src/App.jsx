@@ -11,7 +11,7 @@ import AdminPage from "./pages/AdminPage";
 import EditMakanan from "./components/Admin/EditData/EditMakanan";
 import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
 
-import Navigation from "./components/navigation/Navigation";
+import Navigation from "../src/components/Navigation";
 import Container from "react-bootstrap/Container";
 import Hero from "./components/Hero";
 import DetailOlahraga from "./components/detailOlahraga";

@@ -1,12 +1,9 @@
 /* hero */
 .hero {
-  background-image: url("https://i.ibb.co/LNZ8Fpx/Whats-App-Image-2023-06-10-at-18-27-39.jpg"); /* Ganti dengan path gambar hero Anda */
   background-size: cover;
   background-position: center;
   height: 450px; /* Sesuaikan dengan tinggi yang diinginkan */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .hero-dark::after {
@@ -17,14 +14,5 @@
   width: auto;
   height: 450px;
   background-color: rgba(0, 0, 0, 0.3); /* Sesuaikan dengan kegelapan yang diinginkan */
-}
-
-.hero, .title, .description{
-  color: #535353;
-}
-
-.title, .description{
-  text-align: justify;
-  margin-left: 5%;
 }
 /* hero */
