@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../../../style/input-form.css";
+import "../style/input-form.css";
 import Button from "../../Button";
 
 function InputForm() {
@@ -95,88 +95,90 @@ function InputForm() {
   };
 
   return (
-    <div className="container">
-      <h1>Form Input Data Makanan atau Olahraga</h1>
-
+    <div className="input-form">
       <form onSubmit={handleSubmit}>
         <div className="form-wrapper">
-          <div className="form-group">
-            <label htmlFor="kategori">Kategori:</label>
-            <select
-              id="kategori"
-              value={kategori}
-              onChange={handleKategoriChange}
-            >
-              <option value="">Pilih Kategori</option>
-              <option value="makanan">Makanan</option>
-              <option value="olahraga">Olahraga</option>
-            </select>
+          <div className="col-4">
+            <div className="form-group">
+              <label htmlFor="kategori">Kategori:</label>
+              <select
+                id="kategori"
+                value={kategori}
+                onChange={handleKategoriChange}
+              >
+                <option value="">Pilih Kategori</option>
+                <option value="makanan">Makanan</option>
+                <option value="olahraga">Olahraga</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="judul">Judul:</label>
+              <input
+                type="text"
+                id="judul"
+                value={judul}
+                onChange={(e) => setJudul(e.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="img-upload">Gambar (JPG atau WebP):</label>
+              <input
+                type="file"
+                accept=".jpg, .webp"
+                id="img-upload"
+                onChange={handleImageChange}
+                ref={inputFileRef}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="jumlah-kalori">Jumlah Kalori:</label>
+              <input
+                type="number"
+                id="jumlah-kalori"
+                value={jumlahKalori}
+                onChange={(e) => setJumlahKalori(e.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="level">Level:</label>
+              <select
+                id="level"
+                value={level}
+                onChange={(e) => setLevel(e.target.value)}
+              >
+                <option value="">Pilih Level</option>
+                <option value="rendah">Rendah</option>
+                <option value="normal">Normal</option>
+                <option value="tinggi">Tinggi</option>
+              </select>
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="judul">Judul:</label>
-            <input
-              type="text"
-              id="judul"
-              value={judul}
-              onChange={(e) => setJudul(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="deskripsi-singkat">Deskripsi Singkat:</label>
-            <textarea
-              id="deskripsi-singkat"
-              value={deskripsiSingkat}
-              onChange={(e) => setDeskripsiSingkat(e.target.value)}
-            ></textarea>
-          </div>
-          <div className="form-group">
-            <label htmlFor="deskripsi-lengkap">Deskripsi Lengkap:</label>
-            <textarea
-              id="deskripsi-lengkap"
-              value={deskripsiLengkap}
-              onChange={(e) => setDeskripsiLengkap(e.target.value)}
-            ></textarea>
-          </div>
-          <div className="form-group">
-            <label htmlFor="tips">Tips:</label>
-            <input
-              type="text"
-              id="tips"
-              value={tips}
-              onChange={(e) => setTips(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="img-upload">Gambar (JPG atau WebP):</label>
-            <input
-              type="file"
-              accept=".jpg, .webp"
-              id="img-upload"
-              onChange={handleImageChange}
-              ref={inputFileRef}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="jumlah-kalori">Jumlah Kalori:</label>
-            <input
-              type="number"
-              id="jumlah-kalori"
-              value={jumlahKalori}
-              onChange={(e) => setJumlahKalori(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="level">Level:</label>
-            <select
-              id="level"
-              value={level}
-              onChange={(e) => setLevel(e.target.value)}
-            >
-              <option value="">Pilih Level</option>
-              <option value="rendah">Rendah</option>
-              <option value="normal">Normal</option>
-              <option value="tinggi">Tinggi</option>
-            </select>
+          <div className="col">
+            <div className="form-group">
+              <label htmlFor="deskripsi-singkat">Deskripsi Singkat:</label>
+              <textarea
+                id="deskripsi-singkat"
+                value={deskripsiSingkat}
+                onChange={(e) => setDeskripsiSingkat(e.target.value)}
+              ></textarea>
+            </div>
+            <div className="form-group">
+              <label htmlFor="deskripsi-lengkap">Deskripsi Lengkap:</label>
+              <textarea
+                id="deskripsi-lengkap"
+                value={deskripsiLengkap}
+                onChange={(e) => setDeskripsiLengkap(e.target.value)}
+              ></textarea>
+            </div>
+            <div className="form-group">
+              <label htmlFor="tips">Tips:</label>
+              <textarea
+                type="text"
+                id="tips"
+                value={tips}
+                onChange={(e) => setTips(e.target.value)}
+              />
+            </div>
           </div>
         </div>
         <Button variant="primary" type="submit">

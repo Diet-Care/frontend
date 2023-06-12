@@ -8,6 +8,8 @@ import PageMakananAll from "./pages/PageMakananAll";
 import Edukasi from "./components/Edukasi/Edukasi";
 
 import AdminPage from "./pages/AdminPage";
+import EditMakanan from "./components/Admin/EditData/EditMakanan";
+import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
 
 import Navigation from "./components/navigation/Navigation";
 import Container from "react-bootstrap/Container";
@@ -19,11 +21,6 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <Navigation />
-      <Container>
-        {/* <Hero/> */}
-        <DetailOlahraga />
-      </Container>
       <Routes>
         <Route path="/" element={<Edukasi />} />
         <Route path="/" element={<AdminPage />} />
@@ -33,6 +30,8 @@ function App() {
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
         <Route path="/details/:id" element={<DetailsPageDiet />} />
+        <Route path="/edit-makanan/:uuid" element={<EditMakanan />} />
+        <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} />
         {/* Tambahkan route untuk details */}
       </Routes>
     </Router>
