@@ -16,12 +16,18 @@ import Container from "react-bootstrap/Container";
 import Hero from "./components/Hero";
 import DetailOlahraga from "./components/detailOlahraga";
 import "./App.css";
+import HitungKaloriPage from "./pages/HitungKaloriPage";
+import { NormalKalori, RendahKalori, TinggiKalori } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
+
 
 
 function App() {
   return (
     <Router>
       <Routes>
+
+        <Route path="/" element={<HitungKaloriPage />} />
+
         <Route path="/" element={<Edukasi />} />
         <Route path="/" element={<AdminPage />} />
 
@@ -30,9 +36,13 @@ function App() {
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
         <Route path="/details/:id" element={<DetailsPageDiet />} />
+
+        <Route path="/tinggi" element={<TinggiKalori/>} />
+        <Route path="/normal" element={<NormalKalori/>} />
+        <Route path="/rendah" element={<RendahKalori/>} />
+
         <Route path="/edit-makanan/:uuid" element={<EditMakanan />} />
         <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} />
-        {/* Tambahkan route untuk details */}
       </Routes>
     </Router>
   );
