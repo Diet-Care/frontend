@@ -1,6 +1,5 @@
 .form-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Membagi container menjadi 2 kolom dengan lebar yang sama */
+  display: flex;
   gap: 20px; /* Jarak antara form-group */
 }
 
