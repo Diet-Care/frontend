@@ -1,0 +1,105 @@
+/* hitung */
+.hitung-wrapper .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 500px;
+  padding: 120px 0 100px 0;
+}
+
+.hitung-wrapper .row .form .box-hitung {
+  width: 100%;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.hitung-wrapper form {
+  font-size: 14px;
+}
+.hitung-wrapper h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.hitung-wrapper .form input {
+  padding: 8px 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  margin: 8px 0 16px 0;
+  color: var(--primary-color);
+}
+.hitung-wrapper .form #jenis-kelamin {
+  padding: 10px 12px;
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  margin: 8px 0 16px 0;
+  color: var(--primary-color);
+}
+
+.hitung-wrapper .form button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.hitung-wrapper .form button[type="button"] {
+  background: var(--primary-color);
+  border: 1px solid #56c4f2;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#hasil{
+  margin-top: 20px;
+}
+
+#rekomendasi-diet a {
+  text-decoration: none;
+  color: white;  display: inline-block;
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 12px 24px;
+  text-align: center;
+  border-radius: 12px;
+}
+#error-text{
+  color: red;
+  margin-top: 10px;
+}
+
+
+/* hover */
+.hitung-wrapper .form button[type="button"]:hover {
+  background-color: var(--secondary-color);
+}
+/* hover */
+
+/* hitung */
+
+/* responsive */
+@media (max-width: 991.98px) {
+  .hitung-wrapper .row {
+    width: 100%;
+  }
+  .hitung-wrapper .form button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .hitung-wrapper .row .form .box-hitung {
+    padding: 35px 25px;
+  }
+}
+/* responsive */

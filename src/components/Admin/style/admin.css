@@ -1,0 +1,21 @@
+
+.menu-wrapper {
+  background-color: white;
+  border-right: 2px solid var(--primary-color);
+  position: fixed;
+
+  height: 100vh;
+}
+.admin-menu {
+  background-color: white;
+  color: var(--primary-color);
+  text-align: start;
+}
+.admin-menu.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+.row {
+  --bs-gutter-x: 0 !important;
+}
+
