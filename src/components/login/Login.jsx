@@ -1,19 +1,14 @@
 import { useState } from "react";
 import "./styleLogin/login.css"
-import { login } from "../../redux/actionLogin/action";
+import { login } from "../../redux/actionRegister/actionLogin";
 import { useDispatch, useSelector } from "react-redux";
 
-//const root = ReactDOM.createRoot(
-   // document.getElementById('root')
-  //);
-
-  console.log(Login);
 function Login() {
     const [username, setName] = useState('');
     const [password, setPassword] = useState('');
 
-    const isLoading = useSelector((state) => state.login.isLoading);
-    const error = useSelector((state) => state.login.error);
+    const isLoading = useSelector((state) => state.loginReducer);
+    const error = useSelector((state) => state.loginReducer);
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
@@ -33,7 +28,7 @@ function Login() {
     }
 
     return(
-        
+        <>
             <section className="login">
                 <div className="container">
                     <div className="login-wrapper">
@@ -58,7 +53,7 @@ function Login() {
                     </div>
                 </div>
             </section>
-        
+        </>
     )
 }
 
