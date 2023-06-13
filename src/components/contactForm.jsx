@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux'
 import { setEmail, setMessage, setName } from "../redux/actions/action";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Form, Button, Container, InputGroup } from "react-bootstrap";
+import { Form, Container, InputGroup } from "react-bootstrap";
+import Button from "./Button";
 import "../style/contactForm.css"
 
 const ContactForm = () => {
@@ -65,7 +66,7 @@ const ContactForm = () => {
               />
             </InputGroup>
 
-            <Button type="submit" className="btn-submit">
+            <Button type="submit" variant="primary">
               Submit
             </Button>
           </Form>
