@@ -10,21 +10,23 @@ import AdminPage from "./pages/AdminPage";
 import EditMakanan from "./components/Admin/EditData/EditMakanan";
 import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
 
-// import Navigation from "../src/components/Navigation";
-// import Container from "react-bootstrap/Container";
-// import Hero from "./components/Hero";
-// import DetailOlahraga from "./components/detailOlahraga";
+import Navigation from "../src/components/Navigation";
+import Footer from "./components/Footer";
+import Container from "react-bootstrap/Container";
+import Hero from "./components/Hero";
+import DetailOlahraga from "./components/detailOlahraga";
 
-import "./App.css";
-import HitungKaloriPage from "./pages/HitungKaloriPage";
-import { NormalKalori, RendahKalori, TinggiKalori } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
+// import "./App.css";
+// import HitungKaloriPage from "./pages/HitungKaloriPage";
+// import { NormalKalori, RendahKalori, TinggiKalori } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
 
 
 function App() {
   return (
     <Router>
+      <Navigation />
       <Routes>
-        <Route path="/" element={<AdminPage />} />
+        {/* <Route path="/" element={<AdminPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
@@ -36,8 +38,16 @@ function App() {
         <Route path="/rendah" element={<RendahKalori/>} />
 
         <Route path="/edit-makanan/:uuid" element={<EditMakanan />} />
-        <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} />
+        <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} /> */}
+
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/alldiet" element={<AllDiet />} />
+        <Route path="/makanan-all" element={<PageMakananAll />} />
+        <Route path="/olahraga-all" element={<PageOlahragaAll />} />
+        <Route path="/details/:id" element={<DetailsPageDiet />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
