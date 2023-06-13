@@ -1,5 +1,5 @@
 import React from "react";
-import DietAll from "../components/RekomendasiDIet/DietAll";
+import DietAll from "../components/Home/RekomendasiDIet/DietAll";
 
 const AllDiet = () => {
   return <DietAll />;

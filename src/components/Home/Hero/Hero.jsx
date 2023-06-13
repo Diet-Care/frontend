@@ -1,5 +1,5 @@
-import Button from "../Button";
-import "../../style/home.css";
+import Button from "../../Button";
+import "../../../style/home.css";
 import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Hero = () => {
             Investasi terbaik adalah kesehatan diri kita. Mulailah menerapkan
             gaya hidup sehat dengan diet yang sesuai bagi tubuh kita.
           </p>
-          <Button variant="primary" onClick={() => navigate("/about")}>
+          <Button variant="primary" onClick={() => navigate("/hitung-kalori")}>
             Cek Kebutuhan Gizi Anda
           </Button>
         </div>
