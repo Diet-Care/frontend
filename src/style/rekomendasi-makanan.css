@@ -1,0 +1,117 @@
+/* rekomendasi makanan */
+.makanan {
+  padding: 100px 0;
+  width: 100%;
+}
+
+.makanan .content {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.makanan .content .col .card a {
+  display: flex !important;
+  justify-content: flex-end !important;
+  text-decoration: none !important;
+  margin-top: 30px !important;
+  font-size: 14px !important;
+}
+.makanan .card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+.makanan .card {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: none;
+}
+.makanan .card .text {
+  padding: 20px 20px 30px 20px;
+}
+
+.makanan .header-makanan {
+  display: flex;
+  justify-content: space-between !important;
+}
+.makanan .header-makanan .lihat-detail {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.makanan .header-makanan h1 {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--primary-color);
+}
+.makanan .header-makanan a {
+  text-decoration: none;
+}
+
+.makanan .header-makanan h1 {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--primary-color);
+}
+.makanan .header-makanan h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+.makanan .header-makanan i {
+  font-size: 24px;
+  color: var(--primary-color);
+  padding-bottom: 2px;
+}
+
+.makanan .content .card h1 {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+.makanan .content .card p {
+  margin-top: 8px;
+  color: #a0a1a2;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 300;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.makanan .content .card .text .link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.makanan .btn-makanan button {
+  background: var(--primary-color);
+  border: 1px solid #56c4f2;
+  border-radius: 12px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 60px;
+}
+/* hover */
+.makanan .header-makanan .lihat-detail:hover h3,
+.makanan .header-makanan .lihat-detail:hover i {
+  color: var(--secondary-color);
+}
+
+/* hover */
+/* rekomendasi makanan */

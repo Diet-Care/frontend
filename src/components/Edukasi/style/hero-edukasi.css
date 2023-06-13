@@ -1,0 +1,45 @@
+/* hero */
+.edukasi-wrapper {
+  background-image: url("../asset/image/hero-edukasi.webp"); /* Ganti dengan path gambar hero Anda */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Sesuaikan dengan tinggi yang diinginkan */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; /* Tambahkan posisi relatif pada .edukasi-wrapper */
+}
+
+.hero-dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Sesuaikan dengan tingkat kegelapan yang diinginkan */
+}
+
+.text-wrapper{
+  position: relative;
+  z-index: 2;
+}
+
+.edukasi-wrapper .title{
+  font-weight: 700;
+font-size: 60px;
+color: white;
+}
+.edukasi-wrapper .description{
+  color: white;
+  font-weight: 600;
+font-size: 20px;
+
+}
+
+
+.title, .description{
+  text-align: center!important;
+}
+
+/* hero */
