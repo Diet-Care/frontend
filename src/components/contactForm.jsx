@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux'
-import { setEmail, setMessage, setName } from "../redux/actions/actions";
+import { setEmail, setMessage, setName } from "../redux/actions/action";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Form, Button, Container } from "react-bootstrap";
+import { Form, Button, Container, InputGroup } from "react-bootstrap";
+import "../style/contactForm.css"
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -29,12 +30,11 @@ const ContactForm = () => {
   
   return(
     <Container>
-      <h1>Contact</h1>
       <Row>
-        <Col>
+        <Col className="inputForm">
+          <h1 className="title">Kontak Kami</h1>
           <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="name">
-              <Form.Label>Nama: </Form.Label>
+            <InputGroup className="mb-3">
               <Form.Control
               type="text"
               name="name"
@@ -42,10 +42,9 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Masukkan Nama Anda"
               />
-            </Form.Group>
+            </InputGroup>
 
-            <Form.Group controlId="email">
-              <Form.Label>Email: </Form.Label>
+            <InputGroup className="mb-3">
               <Form.Control
               type="email"
               name="email"
@@ -53,10 +52,9 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Masukkan Alamat Email Anda"
               />
-            </Form.Group>
+            </InputGroup>
 
-            <Form.Group controlId="message">
-              <Form.Label>Pesan: </Form.Label>
+            <InputGroup className="mb-3">
               <Form.Control
               as="textarea"
               rows={3}
@@ -65,10 +63,10 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Tulis Pesan Anda"
               />
-            </Form.Group>
+            </InputGroup>
 
-            <Button variant="primary" type="submit">
-              Kirim
+            <Button type="submit" className="btn-submit">
+              Submit
             </Button>
           </Form>
         </Col>
