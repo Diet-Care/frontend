@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/hitung-kalori.css";
-import Navigation from "../Navigation";
 const FormHitungKalori = () => {
   const [usia, setUsia] = useState("");
   const [jenisKelamin, setJenisKelamin] = useState("");
@@ -54,7 +53,6 @@ const FormHitungKalori = () => {
 
   return (
     <>
-      <Navigation />
       <div class="hitung-wrapper">
         <div class="row mx-auto hitung-content align-items-center">
           <div class="col form text">

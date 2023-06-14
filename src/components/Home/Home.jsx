@@ -11,7 +11,6 @@ import Navigation from "../Navigation";
 const Home = () => {
   return (
     <>
-      <Navigation />
       <Hero />
       <ServiceContent />
       <div className="diet">

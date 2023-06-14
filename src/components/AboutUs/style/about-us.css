@@ -1,66 +1,127 @@
-/* tentang kami */
-.about-us-wrapper {
-  padding: 1200px 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
-.tentang-kami .row .img {
-  position: relative;
+
+.banner{
+    height: 100vh;
+    background-image: linear-gradient(rgba(42, 42, 42, 0.6),rgba(42, 42, 42, 0.6)),url('https://i.ibb.co/0BhYS6p/gambar1.jpg');
+    background-size: cover;
+    background-position: center;
 }
-.tentang-kami .row .img #img-show {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  border-radius: 12px;
+
+
+.text{
+    padding-top: 20%;
 }
-.tentang-kami .row .img .border-img {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  z-index: 1;
-  border: 2px solid var(--primary-color);
-  width: 96%;
-  height: 100%;
-  border-radius: 12px;
+
+.text h2{
+    font-weight: 600;
+    color: white;
 }
-.tentang-kami #judul {
-  font-family: var(--plus-jakarta-sans);
-  font-weight: 700;
-  font-size: 40px;
-  color: var(--primary-color);
-  width: 70%;
+
+.content p{
+    color: white;
+    padding-top: 65px;
+    font-size: 18px;
 }
-.tentang-kami #border-width {
-  border-bottom: 2px solid var(--primary-color);
-  width: 100%;
-  border-radius: 20px;
+
+.session{
+    margin-top: 100px;
 }
-.tentang-kami .row .content h1 {
-  font-family: var(--plus-jakarta-sans);
-  font-weight: 700;
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.666);
+
+.session h1{
+    text-align: center;
+    font-weight: 600;
+    margin: 80px;
 }
-.tentang-kami .row .content p {
-  font-family: var(--plus-jakarta-sans);
-  font-weight: 300;
-  font-size: 18px;
-  color: #a0a1a2;
-  margin-top: 10px;
+
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    margin: 90px;
 }
-.tentang-kami .row .content button {
-  margin-top: 30px;
-  font-family: var(--plus-jakarta-sans);
-  font-weight: 500;
-  font-size: 18px;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
+
+.image-cewe{
+    position: relative;
 }
-/* hover */
-.tentang-kami .row .content button:hover {
-  background: var(--secondary-color);
+
+.image-cewe::before{
+    position: absolute;
+    content: '';
+    right: -20px;
+    top: 20px;
+    border: 5px solid #56c3f25a;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
-/* hover */
-/* tentang kami */
+
+.about .deskripsi h3{
+    margin-left: 15px;
+    color: #56C4F2;
+    padding-right: 80px;
+}
+
+.deskripsi .btn-rekomen{
+    margin-left: 15px;
+    background-color: #56C4F2;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    width: 40%;
+    height: 40px;
+}
+
+.card-session{
+    margin-top: 200px;
+}
+
+.card-session h4{
+    color: #56C4F2;
+    font-weight: 600;
+}
+
+.card-session h6{
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.card-session h1{
+    font-weight: 900;
+    color: #56C4F2;
+}
+
+.card-session h5{
+    color: #56C4F2;
+}
+
+#category h3{
+    text-align: center;
+    padding-bottom: 40px;
+    color: #56C4F2;
+    font-weight: 600;
+}
+
+.icon img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 70%;
+	margin: 0 auto;
+	border: 2px solid #56C4F2;
+}
+
+.icon img:hover{
+	color : #CCD1E4;
+}
+
+#category h6{
+	padding-top: 10px;
+}
+

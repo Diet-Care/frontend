@@ -65,9 +65,9 @@ const Navigation = () => {
             <Button className="button-primary">Search</Button>
           </Form>
           <Nav className="ml-auto">
-            <Nav.Link href="#profile">
+            <NavLink to="/login">
               <CgProfile size={40} />
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

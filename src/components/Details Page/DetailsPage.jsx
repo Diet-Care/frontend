@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Card from "react-bootstrap/Card";
+import "./style/details-page.css";
 import "../../style/home-card.css";
 import "../../style/herodetails.css";
-import Navigation from "../Navigation";
-
 const DetailsPageDiet = () => {
   const { id } = useParams(); // Mengakses ID dari URL
   const urlMakanan = "https://backend-production-2c47.up.railway.app/makanan";
@@ -42,37 +40,37 @@ const DetailsPageDiet = () => {
   }, []);
 
   return (
-    <>
-      <Navigation />
-      <div>
-        {cards
-          .filter((item) => item.uuid === id)
-          .map((item) => (
-            <div className="col-12" key={item.uuid}>
-              <CardDiet
-                title={item.judul}
-                description={item.deskripsi_lengkap}
-                image={item.img}
-                id={item.uuid}
-              />
-            </div>
-          ))}
-      </div>
-    </>
+    <div>
+      {cards
+        .filter((item) => item.uuid === id)
+        .map((item) => (
+          <div className="col-12" key={item.uuid}>
+            <CardDiet
+              title={item.judul}
+              description={item.deskripsi_lengkap}
+              image={item.img}
+              id={item.uuid}
+            />
+          </div>
+        ))}
+    </div>
   );
 };
 
 function CardDiet(props) {
   return (
-    <>
-      <Card className="card-detail">
-        <Card.Img className="card-image" src={props.image} />
-        <Card.Body className="text">
-          <Card.Title className="card-title">{props.title}</Card.Title>
-          <Card.Text className="card-deskripsi">{props.description}</Card.Text>
-        </Card.Body>
-      </Card>
-    </>
+    <div className="container details-wrapper">
+      <div className="title-details">
+        <h1>Kadar Kandungan Gizi Makanan Sehat</h1>
+      </div>
+      <div className="img pt-3">
+        <img src={props.image} alt="" width="100%" />
+      </div>
+      <div className="title-details">
+        <h1>{props.title}</h1>
+      </div>
+      <p>{props.description}</p>
+    </div>
   );
 }
 
