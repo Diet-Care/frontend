@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import "../style/footer.css";
-import "./Button";
+import Button from "./Button";
 
 const Footer = () => {
   const year = new Date().getFullYear();
