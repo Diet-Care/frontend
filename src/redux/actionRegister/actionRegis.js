@@ -1,4 +1,4 @@
-import axios from "axios"
+// import axios from "axios"
 
 export const REGIS_REQUEST = 'REGIS_REQUEST';
 export const REGIS_SUCCESS = 'REGIS_SUCCES';

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from 'react-redux'
-import { setEmail, setMessage, setName } from "../redux/actions/actions";
+import { setEmail, setMessage, setName } from "../../../redux/actions/actions";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Form, Container, InputGroup } from "react-bootstrap";
-import Button from "./Button";
-import "../style/contactForm.css"
+import { Form, Container } from "react-bootstrap";
+import Button from "../../Button";
+import "./style/contactForm.css"
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ const ContactForm = () => {
   };
   
   return(
-    <Container>
+    <Container className="contact">
       <h1>Contact</h1>
       <Row>
         <Col>
