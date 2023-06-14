@@ -22,12 +22,14 @@ import {
   NormalKalori,
   RendahKalori,
 } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
     <Router>
       <Navigation />
       <Routes>
+        <Route path="/" element={<Profile />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
         <Route path="/about-us" element={<AboutUs />} />
