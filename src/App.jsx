@@ -6,6 +6,7 @@ import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
 
 import AdminPage from "./pages/AdminPage";
+import Contact from "./pages/Contact";
 import EditMakanan from "./components/Admin/EditData/EditMakanan";
 import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
 
@@ -15,7 +16,7 @@ import EdukasiPage from "./pages/EdukasiPage";
 
 import Login from "./components/login/Login";
 import Navigation from "./components/Navigation";
-import AboutUs from "./components/AboutUs/AboutUs";
+import AboutUs from "./pages/AboutUsPage";
 import {
   TinggiKalori,
   NormalKalori,
@@ -32,7 +33,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/edukasi" element={<EdukasiPage />} />
-        <Route path="/contact" element={<AdminPage />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />

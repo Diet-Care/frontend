@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../components/Home/Contact/contactForm";
 
-const About = () => {
+const Contact = () => {
   return <ContactForm />;
 };
-export default About;
+export default Contact;

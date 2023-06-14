@@ -41,7 +41,7 @@ const Navigation = () => {
               Edukasi
             </NavLink>
             <NavLink
-              to="/about"
+              to="/about-us"
               activeclassname="active"
               className="nav-link"
             >
