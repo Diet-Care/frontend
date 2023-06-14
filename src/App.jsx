@@ -23,12 +23,14 @@ import {
   RendahKalori,
 } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
 import Register from "./components/register/Register";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
     <Router>
       <Navigation />
       <Routes>
+        <Route path="/" element={<ProfilePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
         <Route path="/about-us" element={<AboutUs />} />

@@ -11,20 +11,20 @@ const RekomendasiOlahraga = () => {
   };
   return (
     <div className="container">
-      <div class="makanan">
-        <div class="row header-makanan">
-          <div class="col">
+      <div className="makanan">
+        <div className="row header-makanan">
+          <div className="col">
             <h1>Rekomendasi Olahraga</h1>
           </div>
-          <div class="col  d-none d-lg-flex justify-content-end ">
+          <div className="col  d-none d-lg-flex justify-content-end ">
             <Button variant="btnLainnya" onClick={handleLihatOlahragaLainnya}>
               <div className="lihat-detail">
-                Lainnya<i class="fa-solid fa-chevron-right"></i>
+                Lainnya<i className="fa-solid fa-chevron-right"></i>
               </div>
             </Button>
           </div>
         </div>
-        <div class="row gap-4 g-4 content mt-lg-0 mt-2">
+        <div className="row gap-4 g-4 content mt-lg-0 mt-2">
           <RekomendasiOlahragaCard />
         </div>
       </div>

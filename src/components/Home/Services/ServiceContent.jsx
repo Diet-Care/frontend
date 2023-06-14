@@ -5,7 +5,7 @@ const ServiceContent = () => {
   return (
       <div className="services">
     <div className="container">
-        <div class=" row gap-3 flex-md-row flex-column">
+        <div className=" row gap-3 flex-md-row flex-column">
           <Service
             icon="fa-solid fa-bowl-food"
             title="Diet Sehat"

@@ -11,9 +11,9 @@ const RekomendasiDiet = () => {
   };
   return (
     <div className="container">
-      <div class="diet-wrapper" id="diet">
-        <div class="row diet-header mb-lg-5">
-          <div class="text-lg-center text-start">
+      <div className="diet-wrapper" id="diet">
+        <div className="row diet-header mb-lg-5">
+          <div className="text-lg-center text-start">
             <h1>Pilihan Diet Yang Cocok Dengan Anda</h1>
             <p>
               Berbagai jenis diet yang dapat disesuaikan dengan kebutuhanmu
@@ -23,9 +23,9 @@ const RekomendasiDiet = () => {
             </p>
           </div>
         </div>
-        <div class="row gap-4 g-4 content mt-lg-0 mt-2">
+        <div className="row gap-4 g-4 content mt-lg-0 mt-2">
           <RekomendasiDietCard />
-          <div class="btn-diet mt-5">
+          <div className="btn-diet mt-5">
             <Button
               variant="primary"
               children="Lihat Diet Lainnya"

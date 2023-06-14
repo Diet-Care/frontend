@@ -11,8 +11,8 @@ const GiziSeimbang = () => {
     navigate("/edukasi");
   }
   return (
-    <div class="row align-items-center px-2">
-      <div class="text  text-center text-white">
+    <div className="row align-items-center px-2">
+      <div className="text  text-center text-white">
         <h1>Apa itu Gizi Seimbang?</h1>
         <p>
           Gizi seimbang adalah susunan makanan sehari-hari yang mengandung zat

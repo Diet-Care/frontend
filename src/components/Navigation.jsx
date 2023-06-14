@@ -23,7 +23,7 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0 nav-link-wrapper" navbarScroll>
-            <NavLink exact to="/" activeclassname="active" className="nav-link">
+            <NavLink exact="true" to="/" activeclassname="active" className="nav-link">
               Home
             </NavLink>
             <NavLink
@@ -65,7 +65,7 @@ const Navigation = () => {
             />
             <Button className="button-primary">Search</Button>
           </Form> */}
-          <Nav class="col py-lg-0 py-3 sign d-flex justify-content-lg-end justify-content-center align-items-center gap-2">
+          <Nav className="col py-lg-0 py-3 sign d-flex justify-content-lg-end justify-content-center align-items-center gap-2">
             <NavLink to="/register" className="signup">
               <button>Sign Up</button>
             </NavLink>
