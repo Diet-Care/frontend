@@ -1,4 +1,4 @@
-import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "../redux/actionRegister/actionLogin"
+import { REGIS_FAILURE, REGIS_REQUEST, REGIS_SUCCESS } from "../actionRegister/actionRegis"
 import { combineReducers } from "redux";
 
 const initialState = {
@@ -9,19 +9,19 @@ const initialState = {
 
 const loginReducer = (state = initialState, action) => {
     switch(action.type){
-        case LOGIN_REQUEST:
+        case REGIS_REQUEST:
             return{
                 ...state,
                 isLoading: true,
                 error: null,
             }
-        case LOGIN_SUCCESS:
+        case REGIS_SUCCESS:
             return{
                 ...state,
                 isLoading: false,
                 error: null,
             }
-        case LOGIN_FAILURE:
+        case REGIS_FAILURE:
             return{
                 ...state,
                 isLoading: false,

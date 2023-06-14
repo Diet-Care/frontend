@@ -24,4 +24,4 @@ function Button({ children, type, variant, ...rest }) {
   );
 }
 
-export default Button;
+export default Button
