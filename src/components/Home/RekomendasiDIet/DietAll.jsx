@@ -28,7 +28,7 @@ const DietAll = () => {
     <>
       <Navigation />
       <div className="container">
-        <div class="row gap-4 g-4 content mt-lg-0 mt-2">
+        <div className="row gap-4 g-4 content mt-lg-0 mt-2">
           <CardMap cards={cards} />;
         </div>
       </div>

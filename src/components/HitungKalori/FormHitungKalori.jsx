@@ -53,9 +53,9 @@ const FormHitungKalori = () => {
 
   return (
     <>
-      <div class="hitung-wrapper">
-        <div class="row mx-auto hitung-content align-items-center">
-          <div class="col form text">
+      <div className="hitung-wrapper">
+        <div className="row mx-auto hitung-content align-items-center">
+          <div className="col form text">
             <div className="box-hitung d-flex justify-content-center flex-column">
               <h1 className="mb-4">Hitung Kalori Anda</h1>
               <form>

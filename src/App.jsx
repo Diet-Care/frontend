@@ -22,18 +22,20 @@ import {
   NormalKalori,
   RendahKalori,
 } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
-import Profile from "./components/Profile/Profile";
+import Register from "./components/register/Register";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Profile />} />
+        <Route path="/" element={<ProfilePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/edukasi" element={<EdukasiPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/alldiet" element={<AllDiet />} />

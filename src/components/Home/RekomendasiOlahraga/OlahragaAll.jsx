@@ -28,7 +28,7 @@ const OlahragaAll = () => {
     <>
       <Navigation />
       <div className="container home-wrapper">
-        <div class="home-layout gap-4 g-4 content mt-lg-0 mt-2">
+        <div className="home-layout gap-4 g-4 content mt-lg-0 mt-2">
           <CardMap cards={cards} />;
         </div>
       </div>

@@ -4,20 +4,20 @@ import Button from "../../Button";
 
 const AboutUs = () => {
   return (
-    <div class="container">
-      <div class="row gap-3 align-items-center">
-        <div class="col-lg-4 img">
+    <div className="container">
+      <div className="row gap-3 align-items-center">
+        <div className="col-lg-4 img">
           <img
             src="https://i.ibb.co/c6hsZV7/Pensive-housewife-holds-green-bok.webp"
             alt="Pensive-housewife-holds-green-bok"
             id="img-show"
             width="100%"
           />
-          <div class="border-img"></div>
+          <div className="border-img"></div>
         </div>
-        <div class="col-lg-7 content">
-          <div class="judul">
-            <h1 id="judul" class="mb-0 mb-lg-3">
+        <div className="col-lg-7 content">
+          <div className="judul">
+            <h1 id="judul" className="mb-0 mb-lg-3">
               Tentang Diet Care
             </h1>
             <h1>
@@ -32,7 +32,7 @@ const AboutUs = () => {
             </p>
             <Button>
               Lihat Lebih Lanjut
-              <i class="fa-solid fa-arrow-right text-white ms-2"></i>
+              <i className="fa-solid fa-arrow-right text-white ms-2"></i>
             </Button>
           </div>
         </div>
