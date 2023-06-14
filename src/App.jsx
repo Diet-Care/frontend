@@ -22,6 +22,7 @@ import {
   NormalKalori,
   RendahKalori,
 } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
+import Register from "./components/register/Register";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/edukasi" element={<EdukasiPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/alldiet" element={<AllDiet />} />
