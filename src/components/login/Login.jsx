@@ -1,60 +1,70 @@
 import { useState } from "react";
 import "./styleLogin/login.css"
-import { login } from "../../redux/actionRegister/actionLogin";
-import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function Login() {
-    const [username, setName] = useState('');
-    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-    const isLoading = useSelector((state) => state.loginReducer);
-    const error = useSelector((state) => state.loginReducer);
-    const dispatch = useDispatch();
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        dispatch(login(username, password));
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
 
-        setName('')
-        setPassword('')
+  const handleLogin = async () => {
+    try {
+      // Mengganti URL dengan URL endpoint login yang sesuai
+      const response = await axios.post('https://backend-production-2c47.up.railway.app/login', {
+        email,
+        password,
+      });
+      // Menangani respons dari server setelah berhasil login
+      console.log(response.data); // Ubah sesuai kebutuhan Anda
+      // Redirect ke halaman lain setelah login berhasil
+      navigate('/');
+    } catch (error) {
+      console.error(error);
+      // Menangani error saat login gagal
+      // Misalnya, menampilkan pesan error kepada pengguna
     }
+  };
 
-    const handleNameChange = (e) => {
-        setName(e.target.value);
-    }
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    }
-
-    return(
-        <>
-            <section className="login">
-                <div className="container">
-                    <div className="login-wrapper">
-                        <div className="row mx-auto login-content align-items-center">
-                            <div className="col form text">
-                                <div className="box-login d-flex justify-content-center flex-column">
-                                    <img
-                                        src="https://i.ibb.co/FzRc6JC/logo-primary.png"
-                                        alt="logo-primary"
-                                        width="60%"
-                                        className="img-logo mb-lg-5 mb-4 mx-auto"
-                                    />
-                                    <form onSubmit={(e) => handleSubmit(e)}>
-                                        Username<input type="username" id="username" value={username} onChange={(e) => handleNameChange(e)}/>
-                                        Password<input type="password" id="password" value={password} onChange={(e) => handlePasswordChange(e)}/>
-                                        <button id="loginBtn" type="submit" disabled={isLoading}>{isLoading ? 'Loading...' : 'Login'}</button>
-                                        {error && <p>{error}</p>}
-                                    </form>
-                                </div>
+  return (
+    <section className="login">
+    <div className="container">
+        <div className="login-wrapper">
+            <div className="row mx-auto login-content align-items-center">
+                <div className="col form text">
+                    <div className="box-login d-flex justify-content-center flex-column">
+                        <img
+                            src="https://i.ibb.co/FzRc6JC/logo-primary.png"
+                            alt="logo-primary"
+                            width="60%"
+                            className="img-logo mb-lg-5 mb-4 mx-auto"
+                        />
+                        <div>
+                            <label htmlFor="email">email:</label>
+                            <input type="text" id="email" value={email} onChange={handleEmailChange} />
                             </div>
+                            <div>
+                            <label htmlFor="password">Password:</label>
+                            <input type="password" id="password" value={password} onChange={handlePasswordChange} />
+                            </div>
+                            <button  id="loginBtn" type="submit" onClick={handleLogin}>Login</button>
                         </div>
                     </div>
                 </div>
-            </section>
-        </>
-    )
+            </div>
+        </div>
+</section>
+   
+  );
 }
 
 export default Login;
+
