@@ -1,0 +1,18 @@
+/* hero */
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 450px; /* Sesuaikan dengan tinggi yang diinginkan */
+  display: flex;
+}
+
+.hero-dark::after {
+  content: '';
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.3); /* Sesuaikan dengan kegelapan yang diinginkan */
+}
+/* hero */

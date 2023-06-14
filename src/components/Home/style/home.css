@@ -1,0 +1,9 @@
+.home-layout{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr); /* mengatur 4 kolom dengan lebar yang sama */
+  gap: 10px;
+  width: 100%;
+}
+.home-wrapper{
+    padding: 100px 0;
+}

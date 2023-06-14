@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from 'react-redux'
-import { setEmail, setMessage, setName } from "../redux/actions/action";
+import { setEmail, setMessage, setName } from "../redux/actions/actions";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Form, Container, InputGroup } from "react-bootstrap";
@@ -31,11 +31,12 @@ const ContactForm = () => {
   
   return(
     <Container>
+      <h1>Contact</h1>
       <Row>
-        <Col className="inputForm">
-          <h1 className="title">Kontak Kami</h1>
+        <Col>
           <Form onSubmit={handleSubmit}>
-            <InputGroup className="mb-3">
+            <Form.Group controlId="name">
+              <Form.Label>Nama: </Form.Label>
               <Form.Control
               type="text"
               name="name"
@@ -43,9 +44,10 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Masukkan Nama Anda"
               />
-            </InputGroup>
+            </Form.Group>
 
-            <InputGroup className="mb-3">
+            <Form.Group controlId="email">
+              <Form.Label>Email: </Form.Label>
               <Form.Control
               type="email"
               name="email"
@@ -53,9 +55,10 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Masukkan Alamat Email Anda"
               />
-            </InputGroup>
+            </Form.Group>
 
-            <InputGroup className="mb-3">
+            <Form.Group controlId="message">
+              <Form.Label>Pesan: </Form.Label>
               <Form.Control
               as="textarea"
               rows={3}
@@ -64,10 +67,10 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Tulis Pesan Anda"
               />
-            </InputGroup>
+            </Form.Group>
 
-            <Button type="submit" variant="primary">
-              Submit
+            <Button variant="primary" type="submit">
+              Kirim
             </Button>
           </Form>
         </Col>
