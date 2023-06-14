@@ -1,0 +1,66 @@
+/* tentang kami */
+.tentang-kami {
+  padding: 120px 0;
+}
+.tentang-kami .row .img {
+  position: relative;
+}
+.tentang-kami .row .img #img-show {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 12px;
+}
+.tentang-kami .row .img .border-img {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 1;
+  border: 2px solid var(--primary-color);
+  width: 96%;
+  height: 100%;
+  border-radius: 12px;
+}
+.tentang-kami #judul {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--primary-color);
+  width: 70%;
+}
+.tentang-kami #border-width {
+  border-bottom: 2px solid var(--primary-color);
+  width: 100%;
+  border-radius: 20px;
+}
+.tentang-kami .row .content h1 {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 700;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.666);
+}
+.tentang-kami .row .content p {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 300;
+  font-size: 18px;
+  color: #a0a1a2;
+  margin-top: 10px;
+}
+.tentang-kami .row .content button {
+  margin-top: 30px;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 500;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+/* hover */
+.tentang-kami .row .content button:hover {
+  background: var(--secondary-color);
+}
+/* hover */
+/* tentang kami */
