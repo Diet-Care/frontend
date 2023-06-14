@@ -21,19 +21,23 @@ import DetailOlahraga from "./components/detailOlahraga";
 // import HitungKaloriPage from "./pages/HitungKaloriPage";
 // import { NormalKalori, RendahKalori, TinggiKalori } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
 
-import "./App.css";
-import HitungKaloriPage from "./pages/HitungKaloriPage";
-import {
-  NormalKalori,
-  RendahKalori,
-  TinggiKalori,
-} from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
+
+// import HitungKaloriPage from "./pages/HitungKaloriPage";
+// import {
+//   NormalKalori,
+//   RendahKalori,
+//   TinggiKalori,
+// } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
 import AboutUs from "./components/AboutUs/AboutUs";
 import EdukasiPage from "./pages/EdukasiPage";
+import Login from "./components/login/Login";
 
 function App() {
   return (
     <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Navigation />
       <Routes>
 
@@ -58,6 +62,7 @@ function App() {
         <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} /> */}
 
         <Route path="/" element={<HomePage />} />
+        
         <Route path="/about" element={<About />} />
         <Route path="/alldiet" element={<AllDiet />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
