@@ -1,127 +1,149 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.banner{
-    height: 100vh;
-    background-image: linear-gradient(rgba(42, 42, 42, 0.6),rgba(42, 42, 42, 0.6)),url('https://i.ibb.co/0BhYS6p/gambar1.jpg');
-    background-size: cover;
-    background-position: center;
+.banner {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../asset/bg-about-us.webp");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  display: flex;
 }
-
-
 .text{
-    padding-top: 20%;
+    z-index: 2;
 }
 
-.text h2{
-    font-weight: 600;
-    color: white;
+.text h1 {
+  font-weight: 800;
+  color: white;
+  font-size: 40px;
 }
 
-.content p{
-    color: white;
-    padding-top: 65px;
-    font-size: 18px;
+.text p {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  width: 80%;
+  margin-top: 40px;
 }
 
-.session{
-    margin-top: 100px;
+.session {
+  margin-top: 100px;
 }
 
-.session h1{
-    text-align: center;
-    font-weight: 600;
-    margin: 80px;
+.session h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  width: 80%;
+  margin: auto;
 }
 
-.about{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 50px;
-    margin: 90px;
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 100px;
 }
 
-.image-cewe{
-    position: relative;
+.image-cewe {
+  position: relative;
 }
 
-.image-cewe::before{
-    position: absolute;
-    content: '';
-    right: -20px;
-    top: 20px;
-    border: 5px solid #56c3f25a;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
+.image-cewe::before {
+  position: absolute;
+  content: "";
+  right: -20px;
+  top: 20px;
+  border: 4px solid #56c3f2bf;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.about .deskripsi h3{
-    margin-left: 15px;
-    color: #56C4F2;
-    padding-right: 80px;
+.about .deskripsi p {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin-bottom: 100px;
+}
+.about {
+  margin-top: 80px;
 }
 
-.deskripsi .btn-rekomen{
-    margin-left: 15px;
-    background-color: #56C4F2;
-    color: white;
-    border: 0;
-    border-radius: 10px;
-    width: 40%;
-    height: 40px;
+.deskripsi .btn-rekomen {
+  background-color: var(--primary-color);
+  color: white;
+  border: 0;
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.deskripsi .btn-rekomen i {
+  padding: 8px;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 50%;
+  font-size: 12px;
 }
 
-.card-session{
-    margin-top: 200px;
+.card-session {
+  padding: 100px 0;
 }
 
-.card-session h4{
-    color: #56C4F2;
-    font-weight: 600;
+.card-session h4 {
+  color: #56c4f2;
+  font-weight: 600;
 }
 
-.card-session h6{
-    font-weight: bold;
-    margin-top: 15px;
+.card-session h6 {
+  font-weight: bold;
+  margin-top: 15px;
 }
 
-.card-session h1{
-    font-weight: 900;
-    color: #56C4F2;
+.card-session h1 {
+  font-weight: 900;
+  color: #56c4f2;
 }
 
-.card-session h5{
-    color: #56C4F2;
+.card-session h5 {
+  color: #56c4f2;
 }
 
-#category h3{
-    text-align: center;
-    padding-bottom: 40px;
-    color: #56C4F2;
-    font-weight: 600;
+#category {
+  padding: 100px 0 200px 0;
 }
 
-.icon img{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 70%;
-	margin: 0 auto;
-	border: 2px solid #56C4F2;
+#category h3 {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #56c4f2;
+  font-weight: 600;
 }
 
-.icon img:hover{
-	color : #CCD1E4;
+.icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70%;
+  margin: 0 auto;
+  border: 2px solid #56c4f2;
 }
 
-#category h6{
-	padding-top: 10px;
+.icon img:hover {
+  color: #ccd1e4;
 }
 
+#category h6 {
+  padding-top: 10px;
+}

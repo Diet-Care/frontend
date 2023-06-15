@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./styleLogin/login.css";
 import Navigation from "../../components/Navigation";
 import { useDispatch } from "react-redux";
 import { setLoginStatus } from "../../redux/actions/actions";
 import { useNavigate } from "react-router-dom";
+
 function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -42,9 +42,18 @@ function Login() {
     }
   };
 
+  useEffect(() => {
+    // Check if the user is already logged in
+    const token = localStorage.getItem("token");
+    if (token) {
+      dispatch(setLoginStatus(true));
+      navigate("/edukasi");
+    }
+  }, []);
+
   return (
     <>
-      <Navigation isLoggedIn={isLoggedIn} />
+      <Navigation />
       <section className="login">
         <div className="container">
           <div className="login-wrapper">
@@ -70,7 +79,7 @@ function Login() {
                     />
                   </div>
                   <button id="loginBtn" type="submit" onClick={handleLogin}>
-                    {isLoggedIn ? "Profile" : "Login"}
+                    Login
                   </button>
                 </div>
               </div>

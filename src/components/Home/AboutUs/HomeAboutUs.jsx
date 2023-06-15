@@ -5,7 +5,7 @@ import Button from "../../Button";
 const AboutUs = () => {
   return (
     <div className="container">
-      <div className="row gap-3 align-items-center">
+      <div className="row gap-5 align-items-center">
         <div className="col-lg-4 img">
           <img
             src="https://i.ibb.co/c6hsZV7/Pensive-housewife-holds-green-bok.webp"
@@ -13,7 +13,6 @@ const AboutUs = () => {
             id="img-show"
             width="100%"
           />
-          <div className="border-img"></div>
         </div>
         <div className="col-lg-7 content">
           <div className="judul">
@@ -22,7 +21,7 @@ const AboutUs = () => {
             </h1>
             <h1>
               Setiap Kita Makan Dan Minum, Kita Dapat Menentukan Dunia Seperti
-              Apa Yang Kita Inginkan A
+              Apa Yang Kita Inginkan
             </h1>
             <p>
               Kami mengajak seluruh masyarakat Indonesia untuk bekerja sama dan

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { Navbar, Container, Nav } from "react-bootstrap";
@@ -9,9 +9,15 @@ import { setLoginStatus } from "../redux/actions/actions";
 
 const Navigation = () => {
   const isLoggedIn = useSelector((state) => state.cekLogin.isLoggedIn);
+  const token = localStorage.getItem("token");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(isLoggedIn);
+
+  useEffect(() => {
+    if (token) {
+      dispatch(setLoginStatus(true));
+    }
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
