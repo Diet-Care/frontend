@@ -1,17 +1,42 @@
+// store profile
+// import { createStore } from "redux";
+// import cekLogin from "./reducer/cekLogin";
+
+// // Create the store
+// const store = createStore(cekLogin);
+
+// export default store;
+
+// store profile
+
+// coba ii
 import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import registerReducer from "./reducer/registerReducer";
-import rootReducer from "./reducer/loginReducer";
-import contactReducer from "./reducer/contactReducer";
-import profileReducer from "./reducer/profileReducer";
-import thunk from "redux-thunk" //sebelum import, pastikan install redux thunk dulu
+import cekLogin from "./reducer/cekLogin";
+import userReducer from "./reducer/userReducer";
 
-const allReducer = combineReducers({ //menyimpan banyak reducer menggunakan combine reducer
-    registerReducer,
-    rootReducer,
-    contactReducer,
-    profileReducer
-})
+// Action Types
+const SET_LOGIN_STATUS = "SET_LOGIN_STATUS";
 
-const store = createStore(allReducer, applyMiddleware(thunk))//langkah awal redux-thunk yaitu applyMidderware
+// Action Creators
+export const setLoginStatus = (isLoggedIn) => ({
+  type: SET_LOGIN_STATUS,
+  payload: isLoggedIn,
+});
 
-export default store
+// Combine multiple reducers
+const rootReducer = combineReducers({
+  cekLogin,
+  registerReducer,
+  userReducer,
+});
+
+// Create the store
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+export default store;
+
+
+// coba ii
+
