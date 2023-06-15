@@ -25,6 +25,7 @@ import {
 import Register from "./components/register/Register";
 import ProfilePage from "./pages/ProfilePage";
 import AccountPage from "./pages/Account";
+import ChangePassword from "./components/ChangePassword/ChangePassword";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/tinggi" element={<TinggiKalori />} />
         <Route path="/normal" element={<NormalKalori />} />
         <Route path="/rendah" element={<RendahKalori />} />
+        <Route path="/change-password" element={<ChangePassword />} />
         <Route path="/edit-makanan/:uuid" element={<EditMakanan />} />
         <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} />
       </Routes>
