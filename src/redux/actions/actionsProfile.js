@@ -6,6 +6,7 @@ export const SET_EMAIL = "SET_EMAIL";
 export const SET_PASSWORD = "SET_PASSWORD";
 export const SET_AGE = "SET_AGE";
 export const SET_CLIMATE = "SET_CLIMATE";
+export const SET_ADDRESS = "SET_ADDRESS";
 
 // Action creators
 export const setUserProfile = (profile) => {
@@ -22,16 +23,23 @@ export const setEmail = (email) => {
   };
 };
 
-export const setPassword = (password) => {
+export const setPassword = (newPassword) => {
   return {
     type: SET_PASSWORD,
-    payload: password,
+    payload: newPassword,
   };
 };
 
 export const setAge = (age) => {
   return {
     type: SET_AGE,
+    payload: age,
+  };
+};
+
+export const setAddress = (address) => {
+  return {
+    type: SET_ADDRESS,
     payload: age,
   };
 };

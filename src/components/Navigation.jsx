@@ -43,7 +43,7 @@ const Navigation = () => {
             <NavLink
               exact="true"
               to="/"
-              activeClassName="active"
+              activeclassname="active"
               className="nav-link"
             >
               Home
