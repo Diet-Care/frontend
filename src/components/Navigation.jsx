@@ -26,7 +26,12 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0 nav-link-wrapper" navbarScroll>
-            <NavLink exact="true" to="/" activeClassName="active" className="nav-link">
+            <NavLink
+              exact="true"
+              to="/"
+              activeClassName="active"
+              className="nav-link"
+            >
               Home
             </NavLink>
             <NavLink
@@ -61,23 +66,23 @@ const Navigation = () => {
               Admin
             </NavLink>
           </Nav>
-          {/* after login */}
-          {/* <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button className="button-primary">Search</Button>
-          </Form> */}
           <Nav class="col py-lg-0 py-3 sign d-flex justify-content-lg-end justify-content-center align-items-center gap-2">
-            <NavLink to="/register" className="signup">
-              <button>Sign Up</button>
-            </NavLink>
-            <NavLink to="/login" className="login">
-              <button>Login</button>
-            </NavLink>
+            {isLoggedIn ? (
+              <NavLink to="/" className="profile">
+                <Button onClick={() => dispatch(setLoginStatus(false))}>
+                  <CgProfile /> Profile
+                </Button>
+              </NavLink>
+            ) : (
+              <>
+                <NavLink to="/register" className="signup">
+                  <Button>Sign Up</Button>
+                </NavLink>
+                <NavLink to="/login" className="login">
+                  <Button>Login</Button>
+                </NavLink>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
