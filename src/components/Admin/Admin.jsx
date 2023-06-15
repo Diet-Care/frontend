@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputForm from "./Form/InputForm";
 import "./style/admin.css";
 import { DataListMakanan, DataListOlahraga } from "./DataList/DataList";
+import UserList from "./UserList/UserList";
 
 function Admin() {
   const [activeMenu, setActiveMenu] = useState("Input Data");
@@ -20,6 +21,12 @@ function Admin() {
       component: <DataListOlahraga />,
       dataKey: "olahraga",
     },
+    {
+      id: 4,
+      title: "Users List",
+      component: <UserList />,
+      dataKey: "users",
+    },
   ];
 
   const handleMenuClick = (menuTitle) => {
@@ -27,8 +34,8 @@ function Admin() {
   };
 
   return (
-    <div className="wrapper">
-      <div className="row">
+    <div className="wrapper py-5">
+      <div className="row py-5">
         <div className="col-md-2 menu-wrapper">
           <div className="  border-right" id="sidebar-wrapper">
             <div className="dica-logo p-4">

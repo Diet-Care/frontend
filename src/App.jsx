@@ -23,15 +23,15 @@ import {
   RendahKalori,
 } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
 import Register from "./components/register/Register";
+import Admin from "./components/Admin/Admin";
 import ProfilePage from "./pages/ProfilePage";
-import AccountPage from "./pages/Account";
 
 function App() {
   return (
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<ProfilePage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -39,8 +39,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/edukasi" element={<EdukasiPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/alldiet" element={<AllDiet />} />
-        <Route path="/account" element={<AccountPage />} />
+        {/* <Route path="/account" element={<AccountPage />} /> */}
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
         <Route path="/details/:id" element={<DetailsPageDiet />} />

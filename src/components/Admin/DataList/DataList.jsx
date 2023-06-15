@@ -34,18 +34,27 @@ function DataList({ url, category }) {
   };
 
   const handleDelete = async (uuid) => {
+    const token = localStorage.getItem('token');
     try {
       const response = await fetch(`${url}/${uuid}`, {
         method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
-
+      console.log(token);
+      console.log(response);
       if (response.ok) {
         fetchData();
       } else {
         setErrorMessage("Gagal menghapus data");
       }
     } catch (error) {
-      console.error(error);
+      const errorData = await response.json({
+        message
+      });
+      console.log(error(error.message));
+      console.log(error(errorData));
       setErrorMessage("Terjadi kesalahan saat mengirim permintaan");
     }
   };

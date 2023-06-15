@@ -7,8 +7,8 @@ import Button from "../Button";
 import "./style/profile.css"
 
 const ProfilePage = () => {
-  const { userProfile } = useSelector((state) => state.profileReducer);
-  const { name, email } = userProfile;
+  // const { userProfile } = useSelector((state) => state.profileReducer);
+  // const { name, email } = userProfile;
 
   return (
     <Container>
@@ -21,8 +21,8 @@ const ProfilePage = () => {
             </div>
             <Card.Body>
             <div className="text-center">
-              <Card.Title>{name}</Card.Title>
-              <Card.Text>Email: {email}</Card.Text>
+              {/* <Card.Title>{name}</Card.Title> */}
+              {/* <Card.Text>Email: {email}</Card.Text> */}
             </div>
               <div className="d-flex justify-content-center">
                 <Link to="/account">
