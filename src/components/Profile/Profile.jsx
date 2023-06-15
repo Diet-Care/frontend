@@ -1,169 +1,39 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setUserProfile, setPhoneNumber, setEmail, setPassword } from "../../redux/actions/actionsProfile";
-import { Container, Row, Col, Form, Card } from "react-bootstrap";
-import { BsPencilSquare } from "react-icons/bs";
+import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import imageProfile from "./asset/profile.png";
-import "./style/profile.css"
 import Button from "../Button";
+import "./style/profile.css"
 
-const Profile = () => {
-  const dispatch = useDispatch();
-  const { userProfile, phoneNumber, email } = useSelector((state) => state.profileReducer);
-
-  const [isEditingName, setIsEditingName] = useState(false);
-  const [isEditingPhoneNumber, setIsEditingPhoneNumber] = useState(false);
-  const [isEditingEmail, setIsEditingEmail] = useState(false);
-  const [isEditingPassword, setIsEditingPassword] = useState(false);
-  const [newName, setNewName] = useState("");
-  const [newPhoneNumber, setNewPhoneNumber] = useState("");
-  const [newEmail, setNewEmail] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-
-  const handleEditName = () => {
-    setIsEditingName(true);
-    setNewName(userProfile.name);
-  };
-
-  const handleEditPhoneNumber = () => {
-    setIsEditingPhoneNumber(true);
-    setNewPhoneNumber(phoneNumber);
-  };
-
-  const handleEditEmail = () => {
-    setIsEditingEmail(true);
-    setNewEmail(email);
-  };
-
-  const handleEditPassword = () => {
-    setIsEditingPassword(true);
-    setNewPassword("");
-  };
-
-  const handleSaveName = () => {
-    dispatch(setUserProfile({ ...userProfile, name: newName }));
-    setIsEditingName(false);
-  };
-
-  const handleSavePhoneNumber = () => {
-    dispatch(setPhoneNumber(newPhoneNumber));
-    setIsEditingPhoneNumber(false);
-  };
-
-  const handleSaveEmail = () => {
-    dispatch(setEmail(newEmail));
-    setIsEditingEmail(false);
-  };
-
-  const handleSavePassword = () => {
-    dispatch(setPassword(newPassword));
-    setIsEditingPassword(false);
-  };
+const ProfilePage = () => {
+  const { userProfile } = useSelector((state) => state.profileReducer);
+  const { name, email } = userProfile;
 
   return (
-    <Container className="profile col-6">
+    <Container>
       <h1>Profile</h1>
       <Row className="mt-4 justify-content-center">
-        <Col md={8}>
+        <Col md={5}>
           <Card>
+            <div className="text-center">
+            <Card.Img variant="top" src={imageProfile} alt="Profile" className="profile-image rounded-circle" style={{ width: "150px", height:"150px"}}/>
+            </div>
             <Card.Body>
-              <div className="text-center">
-                {/* ini yg akan dipakai
-                <Card.Img variant="top" src={userProfile.profilePicture} alt="Profile" /> ini yg dipakai
-                 */}
-                {/* ini sebagai contoh */}
-                <img src={imageProfile} alt="" />
+            <div className="text-center">
+              <Card.Title>{name}</Card.Title>
+              <Card.Text>Email: {email}</Card.Text>
+            </div>
+              <div className="d-flex justify-content-center">
+                <Link to="/account">
+                  <Button variant="primary">Account</Button>
+                </Link>
               </div>
-              <Card.Text className="text-justify">
-                <div className="text-center">{userProfile.name}</div>
-                <div className="text-center">{phoneNumber}</div>
-                <div className="text-center">{email}</div>
-              </Card.Text>
-              <Card.Text>
-                Name:{" "}
-                {isEditingName ? (
-                  <Form.Control
-                    type="text"
-                    value={newName}
-                    onChange={(e) => setNewName(e.target.value)}
-                  />
-                ) : (
-                  <>
-                    {userProfile.name}
-                    <Button variant="primary" onClick={handleEditName} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
-                  </>
-                )}
-                {isEditingName && (
-                  <Button variant="primary" onClick={handleSaveName} className="ml-2">
-                    Save
-                  </Button>
-                )}
-              </Card.Text>
-              <Card.Text>
-                Phone Number:{" "}
-                {isEditingPhoneNumber ? (
-                  <Form.Control
-                    type="text"
-                    value={newPhoneNumber}
-                    onChange={(e) => setNewPhoneNumber(e.target.value)}
-                  />
-                ) : (
-                  <>
-                    {phoneNumber}
-                    <Button variant="primary" onClick={handleEditPhoneNumber} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
-                  </>
-                )}
-                {isEditingPhoneNumber && (
-                  <Button variant="primary" onClick={handleSavePhoneNumber} className="ml-2">
-                    Save
-                  </Button>
-                )}
-              </Card.Text>
-              <Card.Text>
-                Email:{" "}
-                {isEditingEmail ? (
-                  <Form.Control
-                    type="text"
-                    value={newEmail}
-                    onChange={(e) => setNewEmail(e.target.value)}
-                  />
-                ) : (
-                  <>
-                    {email}
-                    <Button variant="primary" onClick={handleEditEmail} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
-                  </>
-                )}
-                {isEditingEmail && (
-                  <Button variant="primary" onClick={handleSaveEmail} className="ml-2">
-                    Save
-                  </Button>
-                )}
-              </Card.Text>
-              <Card.Text>
-                Change Password:{" "}
-                {isEditingPassword ? (
-                  <Form.Control
-                    type="password"
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
-                  />
-                ) : (
-                  <Button variant="primary" onClick={handleEditPassword} className="ml-2">
-                    <BsPencilSquare />
-                  </Button>
-                )}
-                {isEditingPassword && (
-                  <Button variant="primary" onClick={handleSavePassword} className="ml-2">
-                    Save
-                  </Button>
-                )}
-              </Card.Text>
+              <div className="d-flex justify-content-center">
+                <Link to="/schedule">
+                  <Button variant="primary">Schedule</Button>
+                </Link>
+              </div>
             </Card.Body>
           </Card>
         </Col>
@@ -172,4 +42,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfilePage;

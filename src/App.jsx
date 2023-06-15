@@ -24,6 +24,7 @@ import {
 } from "./components/HitungKalori/Pages/PageRekomendasiMakanan";
 import Register from "./components/register/Register";
 import ProfilePage from "./pages/ProfilePage";
+import AccountPage from "./pages/Account";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/edukasi" element={<EdukasiPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/alldiet" element={<AllDiet />} />
+        <Route path="/account" element={<AccountPage />} />
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
         <Route path="/details/:id" element={<DetailsPageDiet />} />
