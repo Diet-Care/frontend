@@ -36,7 +36,7 @@ function Login() {
 
       console.log(response.data);
       dispatch(setLoginStatus(true));
-      navigate("/");
+      navigate("/edukasi");
     } catch (error) {
       console.error(error);
     }

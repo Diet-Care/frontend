@@ -1,15 +1,23 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import Button from "./Button";
 import "../style/navigation.css";
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../redux/actions/actions";
+import { setLoginStatus } from "../redux/actions/actions";
 
 const Navigation = () => {
   const isLoggedIn = useSelector((state) => state.cekLogin.isLoggedIn);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  console.log(isLoggedIn);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    dispatch(setLoginStatus(false));
+    navigate("/");
+  };
 
   return (
     <Navbar expand="lg" className="navbar-fix">
@@ -68,11 +76,9 @@ const Navigation = () => {
           </Nav>
           <Nav class="col py-lg-0 py-3 sign d-flex justify-content-lg-end justify-content-center align-items-center gap-2">
             {isLoggedIn ? (
-              <NavLink to="/" className="profile">
-                <Button onClick={() => dispatch(setLoginStatus(false))}>
-                  <CgProfile /> Profile
-                </Button>
-              </NavLink>
+              <Button onClick={handleLogout}>
+                <CgProfile /> Profile - Logout
+              </Button>
             ) : (
               <>
                 <NavLink to="/register" className="signup">
