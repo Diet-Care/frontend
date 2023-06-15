@@ -10,97 +10,48 @@ import { Container, Row, Col, Form, Card } from "react-bootstrap";
 import { BsPencilSquare } from "react-icons/bs";
 import imageProfile from "./asset/profile.png";
 import Button from "../Button";
+import { useNavigate } from 'react-router-dom';
 
 const Account = () => {
   const dispatch = useDispatch();
   const { userProfile, email } = useSelector((state) => state.profileReducer);
+  const navigate = useNavigate();
 
-  const [isEditingUsername, setIsEditingUsername] = useState(false);
-  const [isEditingName, setIsEditingName] = useState(false);
-  const [isEditingEmail, setIsEditingEmail] = useState(false);
-  const [isEditingGender, setIsEditingGender] = useState(false);
-  const [isEditingAge, setIsEditingAge] = useState(false);
-  const [isEditingPassword, setIsEditingPassword] = useState(false);
-  const [isEditingClimate, setIsEditingClimate] = useState(false);
-
-  const [newUsername, setNewUsername] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
+  const [newAddress, setNewAddress] = useState("");
   const [newName, setNewName] = useState("");
   const [newEmail, setNewEmail] = useState("");
   const [newGender, setNewGender] = useState("");
   const [newAge, setNewAge] = useState("");
   const [newPassword, setNewPassword] = useState("");
-
   const [newClimate, setNewClimate] = useState(userProfile.climate);
 
-  const handleEditUsername = () => {
-    setIsEditingUsername(true);
-    setNewUsername(userProfile.username);
-  };
-
-  const handleEditName = () => {
-    setIsEditingName(true);
+  const handleEdit = () => {
+    setIsEditing(true);
+    setNewAddress(userProfile.address);
     setNewName(userProfile.name);
-  };
-
-  const handleEditEmail = () => {
-    setIsEditingEmail(true);
     setNewEmail(email);
-  };
-
-  const handleEditGender = () => {
-    setIsEditingGender(true);
     setNewGender(userProfile.gender);
-  };
-
-  const handleEditAge = () => {
-    setIsEditingAge(true);
     setNewAge(userProfile.age);
-  };
-
-  const handleEditPassword = () => {
-    setIsEditingPassword(true);
     setNewPassword("");
-  };
-
-  const handleEditClimate = () => {
-    setIsEditingClimate(true);
     setNewClimate(userProfile.climate);
   };
-  
-  const handleSaveUsername = () => {
-    dispatch(setUserProfile({ ...userProfile, username: newUsername }));
-    setIsEditingUsername(false);
-  };
 
-  const handleSaveName = () => {
-    dispatch(setUserProfile({ ...userProfile, name: newName }));
-    setIsEditingName(false);
-  };
-
-  const handleSaveEmail = () => {
+  const handleSave = () => {
+    dispatch(
+      setUserProfile({
+        ...userProfile,
+        address: newAddress,
+        name: newName,
+        gender: newGender,
+        climate: newClimate,
+      })
+    );
     dispatch(setEmail(newEmail));
-    setIsEditingEmail(false);
-  };
-
-  const handleSaveGender = () => {
-    dispatch(setUserProfile({ ...userProfile, gender: newGender }));
-    setIsEditingGender(false);
-  };
-
-  const handleSaveAge = () => {
     dispatch(setAge(newAge));
-    setIsEditingAge(false);
-  };
-
-  const handleSavePassword = () => {
     dispatch(setPassword(newPassword));
-    setIsEditingPassword(false);
+    setIsEditing(false);
   };
-
-  const handleSaveClimate = () => {
-    dispatch(setUserProfile({ ...userProfile, climate: newClimate }));
-    setIsEditingClimate(false);
-  };  
 
   const climateOptions = [
     "Tropical Climate",
@@ -112,6 +63,10 @@ const Account = () => {
     "Mediterranean Climate",
   ];
 
+  const handleChangePassword = () => {
+    navigate("/change-password"); // Replace "/change-password" with the actual URL of the password change page
+  };
+
   return (
     <Container className="profile col-6">
       <h1>Account</h1>
@@ -119,50 +74,41 @@ const Account = () => {
         <Col md={8}>
           <Card>
             <Card.Body>
-            <div className="text-center">
-              <Card.Img 
-              variant="top" 
-              src={imageProfile} 
-              alt="Profile" 
-              className="profile-image rounded-circle" 
-              style={{ width: "150px", height:"150px"}}/>
-            </div>
+              <div className="text-center">
+                <Card.Img
+                  variant="top"
+                  src={imageProfile}
+                  alt="Profile"
+                  className="profile-image rounded-circle"
+                  style={{ width: "150px", height: "150px" }}
+                />
+              </div>
 
-            <div className="text-justify">
-              <Card.Text className="text-center text-md-left">
-                <span>Username: {userProfile.username}</span>
-                <span>Name: {userProfile.name}</span>
-                <span>Email: {email}</span>
-                <span>Gender: {userProfile.gender}</span>
-                <span>Age: {userProfile.age}</span>
-                <span>Climate: {userProfile.climate}</span>
-              </Card.Text>
-            </div>
-              <Card.Text>
-                Username:{" "}
-                {isEditingUsername ? (
-                  <Form.Control
-                    type="text"
-                    value={newUsername}
-                    onChange={(e) => setNewUsername(e.target.value)}
-                  />
-                ) : (
-                  <>
-                    {userProfile.username}
-                    <Button variant="primary" onClick={handleEditUsername} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
-                  </>
-                )}
-                {isEditingUsername && (
-                  <Button variant="primary" onClick={handleSaveUsername} className="ml-2">
-                    Save
-                  </Button>
-                )}
-              </Card.Text>
+              <div className="text-justify">
+                <Card.Text className="text-center text-md-left">
+                <div className="ml-0">
+                    <strong>Name:</strong> {userProfile.name}
+                  </div>
+                  <div>
+                    <strong>Email:</strong> {email}
+                  </div>
+                  <div>
+                    <strong>Gender:</strong> {userProfile.gender}
+                  </div>
+                  <div>
+                    <strong>Age:</strong> {userProfile.age}
+                  </div>
+                  <div>
+                    <strong>Address:</strong> {userProfile.address}
+                  </div>
+                  <div>
+                    <strong>Climate:</strong> {userProfile.climate}
+                  </div>
+                </Card.Text>
+              </div>
               <Card.Text>
                 Name:{" "}
-                {isEditingName ? (
+                {isEditing ? (
                   <Form.Control
                     type="text"
                     value={newName}
@@ -171,20 +117,12 @@ const Account = () => {
                 ) : (
                   <>
                     {userProfile.name}
-                    <Button variant="primary" onClick={handleEditName} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
                   </>
-                )}
-                {isEditingName && (
-                  <Button variant="primary" onClick={handleSaveName} className="ml-2">
-                    Save
-                  </Button>
                 )}
               </Card.Text>
               <Card.Text>
                 Email:{" "}
-                {isEditingEmail ? (
+                {isEditing ? (
                   <Form.Control
                     type="text"
                     value={newEmail}
@@ -193,20 +131,12 @@ const Account = () => {
                 ) : (
                   <>
                     {email}
-                    <Button variant="primary" onClick={handleEditEmail} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
                   </>
-                )}
-                {isEditingEmail && (
-                  <Button variant="primary" onClick={handleSaveEmail} className="ml-2">
-                    Save
-                  </Button>
                 )}
               </Card.Text>
               <Card.Text>
                 Gender:{" "}
-                {isEditingGender ? (
+                {isEditing ? (
                   <Form.Control
                     type="text"
                     value={newGender}
@@ -215,20 +145,12 @@ const Account = () => {
                 ) : (
                   <>
                     {userProfile.gender}
-                    <Button variant="primary" onClick={handleEditGender} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
                   </>
-                )}
-                {isEditingGender && (
-                  <Button variant="primary" onClick={handleSaveGender} className="ml-2">
-                    Save
-                  </Button>
                 )}
               </Card.Text>
               <Card.Text>
                 Age:{" "}
-                {isEditingAge ? (
+                {isEditing ? (
                   <Form.Control
                     type="number"
                     value={newAge}
@@ -237,20 +159,26 @@ const Account = () => {
                 ) : (
                   <>
                     {userProfile.age}
-                    <Button variant="primary" onClick={handleEditAge} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
                   </>
                 )}
-                {isEditingAge && (
-                  <Button variant="primary" onClick={handleSaveAge} className="ml-2">
-                    Save
-                  </Button>
+              </Card.Text>
+              <Card.Text>
+                Address:{" "}
+                {isEditing ? (
+                  <Form.Control
+                    type="text"
+                    value={newAddress}
+                    onChange={(e) => setNewAddress(e.target.value)}
+                  />
+                ) : (
+                  <>
+                    {userProfile.address}
+                  </>
                 )}
               </Card.Text>
               <Card.Text>
                 Climate:{" "}
-                {isEditingClimate ? (
+                {isEditing ? (
                   <Form.Control
                     as="select"
                     value={newClimate}
@@ -263,39 +191,25 @@ const Account = () => {
                 ) : (
                   <>
                     {userProfile.climate}
-                    <Button variant="primary" onClick={handleEditClimate} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
                   </>
                 )}
-                {isEditingClimate && (
-                  <Button variant="primary" onClick={handleSaveClimate} className="ml-2">
+              </Card.Text>
+              <div className="text-center">
+                {isEditing ? (
+                  <Button variant="primary" onClick={handleSave} className="ml-2">
                     Save
                   </Button>
-                )}
-              </Card.Text>
-              <Card.Text>
-                Password:{" "}
-                {isEditingPassword ? (
-                  <Form.Control
-                    type="password"
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
-                  />
                 ) : (
-                  <>
-                    ********
-                    <Button variant="primary" onClick={handleEditPassword} className="ml-2">
-                      <BsPencilSquare />
-                    </Button>
-                  </>
-                )}
-                {isEditingPassword && (
-                  <Button variant="primary" onClick={handleSavePassword} className="ml-2">
-                    Save
+                  <Button variant="primary" onClick={handleEdit} className="ml-2">
+                    Edit
                   </Button>
                 )}
-              </Card.Text>
+                {!isEditing && (
+                  <Button variant="primary" onClick={handleChangePassword} className="ml-2">
+                    Change Password
+                  </Button>
+                )}
+              </div>
             </Card.Body>
           </Card>
         </Col>
