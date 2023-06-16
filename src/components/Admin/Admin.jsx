@@ -27,12 +27,6 @@ function Admin() {
       component: <DataListOlahraga />,
       dataKey: "olahraga",
     },
-    {
-      id: 4,
-      title: "Users List",
-      component: <UserList />,
-      dataKey: "users",
-    },
   ];
 
   const handleMenuClick = (menuTitle) => {
