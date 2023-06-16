@@ -1,5 +1,10 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  Outlet,
+} from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import DetailsPageDiet from "./components/DetailsPage/DetailsPage";
@@ -29,19 +34,40 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 function App() {
   return (
     <Router>
+      <Routes>
+        <Route path="/admin/*" element={<AdminRoutes />} />
+        <Route path="/*" element={<DefaultRoutes />} />
+      </Routes>
+    </Router>
+  );
+}
+
+function AdminRoutes() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Admin />} />
+        <Route path="admin/edit-makanan/:uuid" element={<EditMakanan />} />
+        <Route path="admin/edit-olahraga/:uuid" element={<EditOlahraga />} />
+      </Routes>
+    </>
+  );
+}
+
+function DefaultRoutes() {
+  return (
+    <>
       <Navigation />
       <Routes>
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/hitung-kalori" element={<PrivateRoute />} />
+        <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/edukasi" element={<EdukasiPage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<Admin />} />
-        {/* <Route path="/account" element={<AccountPage />} /> */}
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />
         <Route path="/details/:id" element={<DetailsPageDiet />} />
@@ -49,11 +75,9 @@ function App() {
         <Route path="/normal" element={<NormalKalori />} />
         <Route path="/rendah" element={<RendahKalori />} />
         <Route path="/change-password" element={<ChangePassword />} />
-        <Route path="/edit-makanan/:uuid" element={<EditMakanan />} />
-        <Route path="/edit-olahraga/:uuid" element={<EditOlahraga />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

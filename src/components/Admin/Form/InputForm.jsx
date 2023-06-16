@@ -13,6 +13,7 @@ function InputForm() {
   const [level, setLevel] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Indikator loading
   const inputFileRef = useRef(null);
 
   const handleSubmit = async (e) => {
@@ -54,7 +55,10 @@ function InputForm() {
     formData.append("jumlah_kalori", jumlahKalori);
     formData.append("level", level);
     // mengambil token dari localstorage
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
+
+    setIsLoading(true); // Menandakan sedang dalam proses pengiriman data
+
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -65,7 +69,7 @@ function InputForm() {
       });
 
       const result = await response.json();
-       // Tampilkan respon dari API
+      // Tampilkan respon dari API
 
       // Mengosongkan semua input setelah submit
       setJudul("");
@@ -85,6 +89,8 @@ function InputForm() {
     } catch (error) {
       console.error(error);
       setErrorMessage("Terjadi kesalahan saat mengirim data");
+    } finally {
+      setIsLoading(false); // Menghentikan indikator loading setelah selesai mengirim data
     }
   };
 
@@ -101,7 +107,7 @@ function InputForm() {
   return (
     <div className="input-form">
       <form onSubmit={handleSubmit}>
-        <div className="form-wrapper">
+ <div className="form-wrapper">
           <div className="col-4">
             <div className="form-group">
               <label htmlFor="kategori">Kategori:</label>
@@ -185,11 +191,16 @@ function InputForm() {
             </div>
           </div>
         </div>
-        <Button variant="primary" type="submit">
-          Kirim Data
-        </Button>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
-        {isSuccess && <p className="success-message">Data berhasil dikirim</p>}
+        <div>
+          <Button variant="primary" type="submit" disabled={isLoading}>
+            {isLoading ? "Mengirim..." : "Kirim Data"}
+          </Button>
+
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+          {isSuccess && (
+            <p className="success-message">Data berhasil dikirim</p>
+          )}
+        </div>
       </form>
     </div>
   );

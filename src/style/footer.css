@@ -3,15 +3,14 @@ div ul li {
 }
 
 footer {
-  border-top: 2px solid #ccc;
-  padding-top: 30px;
+  border-top: 2px solid #56c3f238;
+  padding-top: 50px;
   margin-top: 30px;
 }
 
 .footer-container {
   display: flex;
   justify-content: center;
-  padding-top: 3%;  
 }
 
 .footer-column {
@@ -28,8 +27,8 @@ footer {
   margin-right: auto;
 }
 
-.footer-title {
-  text-align: center;
+.footer-title h5 {
+  text-align: start!important;
   color: #56c4f2;
 }
 

@@ -1,10 +1,19 @@
-
 .menu-wrapper {
   background-color: white;
   border-right: 2px solid var(--primary-color);
   position: fixed;
 
   height: 100vh;
+}
+#sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.bottom{
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 .admin-menu {
   background-color: white;
@@ -18,7 +27,6 @@
 .row {
   --bs-gutter-x: 0 !important;
 }
-.admin-wrapper{
+.admin-wrapper {
   z-index: 999;
 }
-

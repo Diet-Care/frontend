@@ -61,9 +61,9 @@ function DataList({ url, category }) {
 
   const getEditURL = (uuid) => {
     if (category === "makanan") {
-      return `/edit-makanan/${uuid}`;
+      return `admin/edit-makanan/${uuid}`;
     } else if (category === "olahraga") {
-      return `/edit-olahraga/${uuid}`;
+      return `admin/edit-olahraga/${uuid}`;
     }
     return "";
   };

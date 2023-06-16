@@ -7,6 +7,15 @@
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
 }
+.button-red{
+  border: none;
+  background-color: rgb(219, 0, 0);
+  color: white;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+}
 .button-lainnya {
   border: none;
   background-color: transparent;

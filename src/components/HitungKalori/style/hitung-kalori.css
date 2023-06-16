@@ -7,6 +7,26 @@
   width: 500px;
   padding: 120px 0 100px 0;
 }
+.hasil-wrapper{
+  margin-top: 20px;
+}
+#hasil{
+  margin-top: 20px!important;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+#rekomendasi-diet{
+  margin-top: 10px;
+}
+
+h1.hitung{
+  color: var(--primary-color)!important;
+  font-size: 32px!important;
+  margin-bottom: 40px!important;
+}
+#error-text{
+  font-size: 14px;
+}
 
 .hitung-wrapper .row .form .box-hitung {
   width: 100%;

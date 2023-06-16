@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../../style/home-card.css";
+import "./hasil-hitung.css"
 import CardMap from "../../Card/CardMap";
 import Normal from "./NormalKalori/Normal";
 import Rendah from "./RendahKalori/Rendah";
@@ -20,7 +21,8 @@ const useFetchData = (level) => {
           const dataMakanan = await responseMakanan.json();
           const dataDietMakanan = dataMakanan.data.filter(
             (item) => item.level === level
-          );
+            );
+            console.log(dataDietMakanan)
           setDietMakanan(dataDietMakanan);
         } else {
           console.error(
@@ -57,7 +59,7 @@ const RendahKalori = () => {
   const makanan = useFetchData("rendah").makanan;
   const olahraga = useFetchData("rendah").olahraga;
   return (
-    <div className="container">
+    <div className="container hasil-hitung">
       <Rendah />
       <CardMap cards={makanan} key="makanan" />
       <CardMap cards={olahraga} key="olahraga" />
@@ -69,7 +71,7 @@ const NormalKalori = () => {
   const makanan = useFetchData("normal").makanan;
   const olahraga = useFetchData("normal").olahraga;
   return (
-    <div className="container">
+    <div className="container hasil-hitung">
       <Normal />
       <CardMap cards={makanan} key="makanan" />
       <CardMap cards={olahraga} key="olahraga" />
@@ -81,7 +83,7 @@ const TinggiKalori = () => {
   const makanan = useFetchData("tinggi").makanan;
   const olahraga = useFetchData("tinggi").olahraga;
   return (
-    <div className="container">
+    <div className="container hasil-hitung">
       <Tinggi />
       <CardMap cards={makanan} key="makanan" />
       <CardMap cards={olahraga} key="olahraga" />

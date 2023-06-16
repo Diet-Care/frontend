@@ -65,7 +65,7 @@ function EditMakanan() {
 
       if (response.ok) {
         // Ganti dengan logika yang sesuai untuk mengarahkan pengguna ke halaman yang diinginkan
-        window.location.href = "/"; // Contoh pengarahan ke halaman "/"
+        window.location.href = "/admin"; // Contoh pengarahan ke halaman "/"
       } else {
         console.error("Gagal menyimpan perubahan data");
       }
