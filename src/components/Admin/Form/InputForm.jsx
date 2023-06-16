@@ -65,7 +65,7 @@ function InputForm() {
       });
 
       const result = await response.json();
-      console.log(result); // Tampilkan respon dari API
+       // Tampilkan respon dari API
 
       // Mengosongkan semua input setelah submit
       setJudul("");
