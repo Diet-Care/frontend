@@ -21,12 +21,13 @@
 }
 .button-secondary {
   border: none;
-  background-color: black;
-  color: white;
+  background-color: transparent;
+  color: var(--primary-color);
   font-weight: 600;
   padding: 10px 24px;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+  border: 1px solid var(--primary-color);
 }
 
 .button-select {
@@ -42,6 +43,10 @@
 
 .button-primary:hover {
   background: var(--secondary-color);
+}
+.button-secondary:hover{
+  color: white;
+  background-color: var(--secondary-color);
 }
 
 .button-border {

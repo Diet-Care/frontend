@@ -40,7 +40,7 @@ export const setAge = (age) => {
 export const setAddress = (address) => {
   return {
     type: SET_ADDRESS,
-    payload: age,
+    payload: address,
   };
 };
 

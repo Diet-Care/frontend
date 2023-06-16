@@ -15,6 +15,7 @@ import thunk from "redux-thunk";
 import registerReducer from "./reducer/registerReducer";
 import cekLogin from "./reducer/cekLogin";
 import userReducer from "./reducer/userReducer";
+import profileReducer from "./reducer/profileReducer";
 
 // Action Types
 const SET_LOGIN_STATUS = "SET_LOGIN_STATUS";
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
   cekLogin,
   registerReducer,
   userReducer,
+  profileReducer,
 });
 
 // Create the store
@@ -37,6 +39,4 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
 
-
 // coba ii
-

@@ -25,7 +25,7 @@ import {
 import Register from "./components/register/Register";
 import Admin from "./components/Admin/Admin";
 import ProfilePage from "./pages/ProfilePage";
-import AccountPage from "./pages/Account";
+import AccountPage from "./pages/AccountPage";
 import ChangePassword from "./components/ChangePassword/ChangePassword";
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/account" element={<AccountPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
         <Route path="/about-us" element={<AboutUs />} />

@@ -4,7 +4,8 @@ import "./styleLogin/login.css";
 import Navigation from "../../components/Navigation";
 import { useDispatch } from "react-redux";
 import { setLoginStatus } from "../../redux/actions/actions";
-import { useNavigate } from "react-router-dom";
+import { NavLink, Navigate, useNavigate } from "react-router-dom";
+import Button from "../Button";
 
 function Login() {
   const dispatch = useDispatch();
@@ -21,6 +22,10 @@ function Login() {
     setPassword(event.target.value);
   };
 
+  const handleRegister = () => {
+    Navigate("/register");
+  };
+
   const handleLogin = async () => {
     try {
       const response = await axios.post(
@@ -33,8 +38,7 @@ function Login() {
 
       // Store the token in local storage
       localStorage.setItem("token", response.data.data);
-
-      console.log(response.data);
+      console.log(response.data.data);
       dispatch(setLoginStatus(true));
       navigate("/edukasi");
     } catch (error) {
@@ -60,6 +64,12 @@ function Login() {
             <div className="row mx-auto login-content align-items-center">
               <div className="col form text">
                 <div className="box-login d-flex justify-content-center flex-column">
+                  <img
+                    src="https://i.ibb.co/FzRc6JC/logo-primary.png"
+                    alt="logo-primary"
+                    width="60%"
+                    className="img-logo mb-lg-5 mb-4 mx-auto"
+                  />
                   <div>
                     <label htmlFor="email">Email:</label>
                     <input
@@ -78,9 +88,14 @@ function Login() {
                       onChange={handlePasswordChange}
                     />
                   </div>
-                  <button id="loginBtn" type="submit" onClick={handleLogin}>
+                  <Button variant="primary" type="submit" onClick={handleLogin}>
                     Login
-                  </button>
+                  </Button>
+                  <NavLink to="/register" className="signup">
+                    <Button variant="secondary" type="submit">
+                      Register
+                    </Button>
+                  </NavLink>
                 </div>
               </div>
             </div>

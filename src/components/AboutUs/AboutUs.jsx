@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+import Button from "../Button";
 import "./style/about-us.css";
 
 function AboutUs() {
@@ -41,10 +43,12 @@ function AboutUs() {
                 gerakan yang bertujuan untuk mendorong penerapan kebiasaan makan
                 dan minum yang lebih sehat dan berkelanjutan.
               </p>
-              <button className="btn-rekomen">
-                Cek Rekomendasi Makanan Anda
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
+              <NavLink to="/hitung-kalori" className="hitung-kalori">
+                <Button className="btn-rekomen">
+                  Cek Rekomendasi Makanan Anda
+                  <i class="fa-solid fa-arrow-right"></i>
+                </Button>
+              </NavLink>
             </div>
           </div>
         </div>

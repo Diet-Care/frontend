@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/about-us.css";
 import Button from "../../Button";
+import { NavLink } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -29,10 +30,12 @@ const AboutUs = () => {
               bertujuan untuk mendorong penerapan kebiasaan makan dan minum yang
               lebih sehat dan berkelanjutan.
             </p>
-            <Button>
-              Lihat Lebih Lanjut
-              <i className="fa-solid fa-arrow-right text-white ms-2"></i>
-            </Button>
+            <NavLink to="/about-us" className="home-about">
+              <Button>
+                Lihat Lebih Lanjut
+                <i className="fa-solid fa-arrow-right text-white ms-2"></i>
+              </Button>
+            </NavLink>
           </div>
         </div>
       </div>

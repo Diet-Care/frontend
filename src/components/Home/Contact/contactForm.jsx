@@ -31,10 +31,10 @@ const ContactForm = () => {
 
   return (
     <Container className="contact">
-      <h1>Contact</h1>
-      <Row>
+      <Row className="d-flex justify-content-between w-100 gap-5">
         <Col>
-          <Form onSubmit={handleSubmit}>
+          <h1 className="contact-title">Contact</h1>
+          <Form onSubmit={handleSubmit} className=" d-flex flex-column gap-3">
             <Form.Group controlId="name">
               <Form.Label>Nama: </Form.Label>
               <Form.Control
@@ -69,13 +69,15 @@ const ContactForm = () => {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
-              Kirim
-            </Button>
+            <div className="mt-3">
+              <Button variant="primary" type="submit">
+                Kirim
+              </Button>
+            </div>
           </Form>
         </Col>
-        <Col>
-          <img src="https://i.ibb.co/KwtNJdp/Hero.png" alt="" width={600} />
+        <Col >
+          <img src="https://i.ibb.co/KwtNJdp/Hero.png" alt="" width="100%" />
         </Col>
       </Row>
     </Container>
