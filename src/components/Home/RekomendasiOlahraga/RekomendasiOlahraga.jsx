@@ -11,8 +11,8 @@ const RekomendasiOlahraga = () => {
   };
   return (
     <div className="container">
-      <div className="makanan">
-        <div className="row header-makanan">
+      <div className="olahraga">
+        <div className="row header-olahraga">
           <div className="col">
             <h1>Rekomendasi Olahraga</h1>
           </div>

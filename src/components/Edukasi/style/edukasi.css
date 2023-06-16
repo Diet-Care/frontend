@@ -11,3 +11,22 @@
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  /* Aturan CSS untuk tampilan layar ponsel */
+.edukasi-layout{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* mengatur 4 kolom dengan lebar yang sama */
+  gap: 10px;
+  width: 100%;
+}
+.edukasi h1{
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-top: 50px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+}
+

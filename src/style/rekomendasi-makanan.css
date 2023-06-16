@@ -1,7 +1,11 @@
 /* rekomendasi makanan */
-.makanan {
+.makanan-home {
   padding: 100px 0;
+  background: #d1eeff36;
   width: 100%;
+}
+.makanan{
+  padding-top: 100px;
 }
 
 .makanan .content {

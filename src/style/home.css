@@ -15,3 +15,17 @@
   color: #a0a1a2;
 }
 /* hero */
+
+@media (max-width: 767px) {
+  /* Aturan CSS untuk tampilan layar ponsel */
+  #title {
+    font-family: var(--plus-jakarta-sans);
+    font-size: 44px;
+    color: var(--primary-color);
+  }
+  #description {
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    color: #a0a1a2;
+  }
+}

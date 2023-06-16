@@ -35,3 +35,22 @@
   width: 75%;
   margin: 0 auto;
 }
+
+
+@media (max-width: 767px) {
+  /* Aturan CSS untuk tampilan layar ponsel */
+.gizi .text h1 {
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 700;
+  font-size: 28px;
+}
+.gizi .text p {
+  margin-top: 20px;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 300;
+  font-size: 12px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+}

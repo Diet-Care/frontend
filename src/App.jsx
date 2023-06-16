@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import AllDiet from "./pages/AllDiet";
 import DetailsPageDiet from "./components/Details Page/DetailsPage";
 import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
 
-import AdminPage from "./pages/AdminPage";
 import Contact from "./pages/Contact";
 import EditMakanan from "./components/Admin/EditData/EditMakanan";
 import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
@@ -43,7 +41,6 @@ function App() {
         <Route path="/edukasi" element={<EdukasiPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/alldiet" element={<AllDiet />} />
         {/* <Route path="/account" element={<AccountPage />} /> */}
         <Route path="/makanan-all" element={<PageMakananAll />} />
         <Route path="/olahraga-all" element={<PageOlahragaAll />} />

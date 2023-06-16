@@ -7,7 +7,7 @@ const CardMap = ({ cards }) => {
   return (
     <>
       {cards.map((item) => (
-        <div className="col card-wrapper" key={item.uuid}>
+        <div className="col-12 col-lg-3 card-wrapper" key={item.uuid}>
           <Card className="card">
             <div className="img-wrapper">
               <Card.Img className="card-image" src={item.img} />

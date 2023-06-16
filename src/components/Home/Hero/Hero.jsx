@@ -5,7 +5,7 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <div className="container">
-      <div className="hero-wrapper row gap-0 align-items-center flex-lg-row flex-column-reverse ">
+      <div className="hero-wrapper row gap-0 align-items-md-center justify-content-center flex-lg-row flex-column-reverse ">
         <div className="col-lg-6 col-md-12 left">
           <h1
             className="fw-bold mt-lg-0 mt-3 animate__animated animate__fadeInUp"

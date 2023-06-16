@@ -55,3 +55,12 @@
 }
 /* hover */
 /* service */
+
+@media (max-width: 767px) {
+  /* Aturan CSS untuk tampilan layar ponsel */
+  .services {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+}

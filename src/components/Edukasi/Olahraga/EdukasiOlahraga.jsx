@@ -28,7 +28,7 @@ const EdukasiOlahraga = () => {
     <div className=" edukasi pt-4">
       <h1 className="text-center">Rekomendasi Olahraga</h1>
       <div className="edukasi-layout gap-4 g-4 content mt-lg-0 pt-5">
-        <CardMap cards={cards} />;
+        <CardMap cards={cards} />
       </div>
     </div>
   );

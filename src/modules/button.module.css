@@ -17,7 +17,6 @@
   justify-content: flex-end;
   text-decoration: none;
   font-size: 24px;
-  
 }
 .button-secondary {
   border: none;
@@ -44,7 +43,7 @@
 .button-primary:hover {
   background: var(--secondary-color);
 }
-.button-secondary:hover{
+.button-secondary:hover {
   color: white;
   background-color: var(--secondary-color);
 }
@@ -64,4 +63,62 @@
   background: var(--primary-color);
   border: 2px solid var(--primary-color);
   color: white;
+}
+
+@media (max-width: 767px) {
+  /* Aturan CSS untuk tampilan layar ponsel */
+  .button-primary {
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+    font-size: 12px;
+  }
+  .button-lainnya {
+    border: none;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    /* padding: 10px 24px; */
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .button-secondary {
+    border: none;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 10px 24px;
+    font-size: 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+    border: 1px solid var(--primary-color);
+  }
+
+  .button-select {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.144);
+    color: black;
+    font-weight: 600;
+    padding: 10px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.151);
+    outline: none;
+  }
+  .button-border {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    color: var(--primary-color);
+    padding: 12px 24px;
+    font-size: 12px;
+    font-weight: 00;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+  }
 }

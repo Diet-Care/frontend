@@ -7,7 +7,7 @@ function AboutUs() {
     <>
       <section className="header-session">
         <div className="banner">
-          <div className="content container">
+          <div className="content">
             <div className="text">
               <h1>
                 KAMI PERCAYA TUBUH YANG SEHAT. <br></br>MEMBUTUHKAN MAKANAN YANG
@@ -28,7 +28,7 @@ function AboutUs() {
             Setiap Kita Makan Dan Minum, Kita Dapat Menentukan Dunia Seperti Apa
             Yang Kita Inginkan
           </h1>
-          <div className="about">
+          <div className="about d-flex flex-column flex-lg-row">
             <div className="image-cewe">
               <img
                 src="https://i.ibb.co/c6hsZV7/Pensive-housewife-holds-green-bok.webp"
@@ -53,53 +53,49 @@ function AboutUs() {
           </div>
         </div>
         <div className="card-session">
-          <div className="container">
-            <h1>NILAI NILAI KAMI</h1>
-            <h5>HOPE: Humanism, Openness, Proximity, dan Enthusiasm</h5>
-            <p>
-              Ini bukanlah hanya sekadar slogan. Ini adalah pengingat tujuan
-              kami dan apa yang kami perjuangkan, di atas dan di luar dari
-              tujuan komersial kami. Keempat Nilai tersebut menjadi panduan kami
-              dalam berperilaku setiap hari, cara bekerja, serta demi kemajuan
-              dalam bisnis kami.
-            </p>
-            <div className="row my-5 gap-4">
-              <div className="col">
-                <div className="card">
-                  <div className="card-body pertama">
-                    <h4 className="card-tittle">HUMANISM</h4>
-                    <h6>Humanisme</h6>
-                    <p className="card-text">Berbagi tanggung jawab, Ramah</p>
-                  </div>
+          <h1>NILAI NILAI KAMI</h1>
+          <h5>HOPE: Humanism, Openness, Proximity, dan Enthusiasm</h5>
+          <p>
+            Ini bukanlah hanya sekadar slogan. Ini adalah pengingat tujuan kami
+            dan apa yang kami perjuangkan, di atas dan di luar dari tujuan
+            komersial kami. Keempat Nilai tersebut menjadi panduan kami dalam
+            berperilaku setiap hari, cara bekerja, serta demi kemajuan dalam
+            bisnis kami.
+          </p>
+          <div className="row my-5 gap-4 card-layout">
+            <div className="card-wrapper">
+              <div className="card">
+                <div className="card-body pertama">
+                  <h4 className="card-tittle">HUMANISM</h4>
+                  <h6>Humanisme</h6>
+                  <p className="card-text">Berbagi tanggung jawab, Ramah</p>
                 </div>
               </div>
-              <div className="col">
-                <div className="card">
-                  <div className="card-body kedua">
-                    <h4 className="card-tittle">OPENNESS</h4>
-                    <h6>Keterbukaan</h6>
-                    <p className="card-text">
-                      Keingintahuan, Kegesitan, Dialog
-                    </p>
-                  </div>
+            </div>
+            <div className="card-wrapper">
+              <div className="card">
+                <div className="card-body kedua">
+                  <h4 className="card-tittle">OPENNESS</h4>
+                  <h6>Keterbukaan</h6>
+                  <p className="card-text">Keingintahuan, Kegesitan, Dialog</p>
                 </div>
               </div>
-              <div className="col">
-                <div className="card">
-                  <div className="card-body ketiga">
-                    <h4 className="card-tittle">PROXIMITY</h4>
-                    <h6>Kedekatan</h6>
-                    <p className="card-text">Aksesibilitas, Keaslian, Empati</p>
-                  </div>
+            </div>
+            <div className="card-wrapper">
+              <div className="card">
+                <div className="card-body ketiga">
+                  <h4 className="card-tittle">PROXIMITY</h4>
+                  <h6>Kedekatan</h6>
+                  <p className="card-text">Aksesibilitas, Keaslian, Empati</p>
                 </div>
               </div>
-              <div className="col">
-                <div className="card">
-                  <div className="card-body keempat">
-                    <h4 className="card-tittle">ENTHUASIASM</h4>
-                    <h6>Antusiasme</h6>
-                    <p className="card-text">Keberanian, Semangat dan Ulet</p>
-                  </div>
+            </div>
+            <div className="card-wrapper">
+              <div className="card">
+                <div className="card-body keempat">
+                  <h4 className="card-tittle">ENTHUASIASM</h4>
+                  <h6>Antusiasme</h6>
+                  <p className="card-text">Keberanian, Semangat dan Ulet</p>
                 </div>
               </div>
             </div>

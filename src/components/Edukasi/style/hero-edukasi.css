@@ -17,29 +17,51 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Sesuaikan dengan tingkat kegelapan yang diinginkan */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Sesuaikan dengan tingkat kegelapan yang diinginkan */
 }
 
-.text-wrapper{
+.text-wrapper {
   position: relative;
   z-index: 2;
 }
 
-.edukasi-wrapper .title{
+.edukasi-wrapper .title {
   font-weight: 700;
   font-size: 60px;
   color: white;
 }
-.edukasi-wrapper .description{
+.edukasi-wrapper .description {
   color: white;
   font-weight: 600;
   font-size: 20px;
-
 }
 
+.title,
+.description {
+  text-align: center !important;
+}
 
-.title, .description{
-  text-align: center!important;
+@media (max-width: 767px) {
+  /* Aturan CSS untuk tampilan layar ponsel */
+  .edukasi-wrapper .title {
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+  }
+  .edukasi-wrapper .description {
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .title,
+  .description {
+    text-align: left !important;
+  }
 }
 
 /* hero */

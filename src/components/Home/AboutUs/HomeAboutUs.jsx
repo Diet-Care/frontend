@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div className="container">
       <div className="row gap-5 align-items-center">
-        <div className="col-lg-4 img">
+        <div className="col-lg-4 img p-2 p-lg-0">
           <img
             src="https://i.ibb.co/c6hsZV7/Pensive-housewife-holds-green-bok.webp"
             alt="Pensive-housewife-holds-green-bok"
@@ -31,7 +31,7 @@ const AboutUs = () => {
               lebih sehat dan berkelanjutan.
             </p>
             <NavLink to="/about-us" className="home-about">
-              <Button>
+              <Button variant="primary">
                 Lihat Lebih Lanjut
                 <i className="fa-solid fa-arrow-right text-white ms-2"></i>
               </Button>

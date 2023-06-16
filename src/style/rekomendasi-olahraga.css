@@ -1,90 +1,89 @@
 .olahraga {
   padding: 100px 0;
-  background: #d1eeff36;
   width: 100%;
 }
 
-/* rekomendasi makanan */
-.makanan .header-makanan .text {
+/* rekomendasi olahraga */
+.olahraga .header-olahraga .text {
   width: 80%;
   margin: auto;
   text-align: center;
 }
 
-.makanan .content {
+.olahraga .content {
   display: flex;
   gap: 40px;
   margin-top: 60px;
 }
 
-.makanan .content .col .card a {
+.olahraga .content .col .card a {
   display: flex;
   justify-content: flex-end;
   text-decoration: none;
   margin-top: 30px;
   font-size: 14px;
 }
-.makanan .card img {
+.olahraga .card img {
   height: 200px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
-.makanan .card {
+.olahraga .card {
   width: 100%;
   background-color: white;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   border: none;
 }
-.makanan .card .text {
+.olahraga .card .text {
   padding: 20px 20px 30px 20px;
 }
 
-.makanan .header-makanan {
+.olahraga .header-olahraga {
   display: flex;
   justify-content: space-between;
 }
-.makanan .header-makanan .lihat-detail {
+.olahraga .header-olahraga .lihat-detail {
   display: flex;
   gap: 5px;
   align-items: center;
   justify-content: flex-end;
 }
 
-.makanan .header-makanan h1 {
+.olahraga .header-olahraga h1 {
   font-family: var(--plus-jakarta-sans);
   font-weight: 600;
   font-size: 28px;
   color: var(--primary-color);
 }
-.makanan .header-makanan a {
+.olahraga .header-olahraga a {
   text-decoration: none;
 }
 
-.makanan .header-makanan h1 {
+.olahraga .header-olahraga h1 {
   font-family: var(--plus-jakarta-sans);
   font-weight: 600;
   font-size: 28px;
   color: var(--primary-color);
 }
-.makanan .header-makanan h3 {
+.olahraga .header-olahraga h3 {
   font-weight: 600;
   font-size: 24px;
   color: var(--primary-color);
 }
-.makanan .header-makanan i {
+.olahraga .header-olahraga i {
   font-size: 24px;
   color: var(--primary-color);
   padding-bottom: 2px;
 }
 
-.makanan .content .card h1 {
+.olahraga .content .card h1 {
   font-family: var(--plus-jakarta-sans);
   font-weight: 600;
   font-size: 24px;
   color: var(--primary-color);
 }
-.makanan .content .card p {
+.olahraga .content .card p {
   margin-top: 8px;
   color: #a0a1a2;
   font-family: var(--plus-jakarta-sans);
@@ -98,12 +97,12 @@
   max-width: 100%;
 }
 
-.makanan .content .card .text .link {
+.olahraga .content .card .text .link {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.makanan .btn-makanan button {
+.olahraga .btn-olahraga button {
   background: var(--primary-color);
   border: 1px solid #56c4f2;
   border-radius: 12px;
@@ -114,10 +113,10 @@
   margin-top: 60px;
 }
 /* hover */
-.makanan .header-makanan .lihat-detail:hover h3,
-.makanan .header-makanan .lihat-detail:hover i {
+.olahraga .header-olahraga .lihat-detail:hover h3,
+.olahraga .header-olahraga .lihat-detail:hover i {
   color: var(--secondary-color);
 }
 
 /* hover */
-/* rekomendasi makanan */
+/* rekomendasi olahraga */

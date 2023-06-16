@@ -31,7 +31,7 @@ const ContactForm = () => {
 
   return (
     <Container className="contact">
-      <Row className="d-flex justify-content-between w-100 gap-5">
+      <Row className="d-flex justify-content-between w-100 gap-5 flex-lg-row flex-column-reverse pt-5 pt-lg-0">
         <Col>
           <h1 className="contact-title">Contact</h1>
           <Form onSubmit={handleSubmit} className=" d-flex flex-column gap-3">

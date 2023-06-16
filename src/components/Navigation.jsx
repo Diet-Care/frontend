@@ -15,7 +15,6 @@ const Navigation = () => {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
 
-
   useEffect(() => {
     if (token) {
       dispatch(setLoginStatus(true));
@@ -46,17 +45,22 @@ const Navigation = () => {
 
   return (
     <Navbar expand="lg" className="navbar-fix">
-      <Container className="nav navbar-nav mt-0 ">
-        <Navbar.Brand href="/" className="me-4">
-          <img
-            src="https://i.ibb.co/mCXdQKm/logo-no-background.png"
-            alt="logo-no-background"
-            border="0"
-            width="100%"
-            height={30}
+      <Container className="nav navbar-nav mt-0  ">
+        <div className="navbar-wrapper me-4">
+          <Navbar.Brand href="/">
+            <img
+              src="https://i.ibb.co/mCXdQKm/logo-no-background.png"
+              alt="logo-no-background"
+              border="0"
+              width="100%"
+              height={25}
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle className="toggle"
+            aria-controls="navbarScroll"
+            children={<i class="fa-solid fa-bars"></i>}
           />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        </div>
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0 nav-link-wrapper" navbarScroll>
             <NavLink

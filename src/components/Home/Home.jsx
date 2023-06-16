@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "./Hero/Hero";
-import RekomendasiDiet from "./RekomendasiDIet/RekomendasiDiet";
 import GiziSeimbang from "./GiziSeimbang/GiziSeimbang";
 import ServiceContent from "./Services/ServiceContent";
 import RekomendasiMakanan from "./RekomendasiMakanan/RekomendasiMakanan";
@@ -13,8 +12,8 @@ const Home = () => {
     <>
       <Hero />
       <ServiceContent />
-      <div className="diet">
-        <RekomendasiDiet />
+      <div className="makanan-home" id="makanan">
+        <RekomendasiMakanan />
       </div>
       <div className="tentang-kami">
         <HomeAboutUs />
@@ -22,10 +21,7 @@ const Home = () => {
       <div className="gizi">
         <GiziSeimbang />
       </div>
-      <div className="makanan">
-        <RekomendasiMakanan />
-      </div>
-      <div className="olahraga">
+      <div className="olahraga" id="olahraga">
         <RekomendasiOlahraga />
       </div>
     </>
