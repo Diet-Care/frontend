@@ -7,7 +7,7 @@ import Button from "../../Button";
 const RekomendasiOlahraga = () => {
   const navigate = useNavigate();
   const handleLihatOlahragaLainnya = () => {
-    navigate("/olahraga-all");
+    navigate("/edukasi");
   };
   return (
     <div className="container">

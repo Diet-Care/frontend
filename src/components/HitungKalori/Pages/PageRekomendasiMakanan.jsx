@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../../style/home-card.css";
-import "./hasil-hitung.css"
+import "./hasil-hitung.css";
 import CardMap from "../../Card/CardMap";
 import Normal from "./NormalKalori/Normal";
 import Rendah from "./RendahKalori/Rendah";
@@ -21,8 +21,8 @@ const useFetchData = (level) => {
           const dataMakanan = await responseMakanan.json();
           const dataDietMakanan = dataMakanan.data.filter(
             (item) => item.level === level
-            );
-            console.log(dataDietMakanan)
+          );
+          console.log(dataDietMakanan);
           setDietMakanan(dataDietMakanan);
         } else {
           console.error(
@@ -60,9 +60,15 @@ const RendahKalori = () => {
   const olahraga = useFetchData("rendah").olahraga;
   return (
     <div className="container hasil-hitung">
-      <Rendah />
-      <CardMap cards={makanan} key="makanan" />
-      <CardMap cards={olahraga} key="olahraga" />
+      <Normal />
+      <h1 className="tipe">Makanan</h1>
+      <div class="hasil-layout gap-4 mt-lg-0 mt-2 mb-5">
+        <CardMap cards={makanan} key="makanan" />
+      </div>
+      <h1 className="tipe pt-4">Olahraga</h1>
+      <div class="hasil-layout gap-4 mt-lg-0 mt-2 mb-5">
+        <CardMap cards={olahraga} key="olahraga" />
+      </div>
     </div>
   );
 };
@@ -73,8 +79,14 @@ const NormalKalori = () => {
   return (
     <div className="container hasil-hitung">
       <Normal />
-      <CardMap cards={makanan} key="makanan" />
-      <CardMap cards={olahraga} key="olahraga" />
+      <h1 className="tipe">Makanan</h1>
+      <div class="hasil-layout gap-4 mt-lg-0 mt-2 mb-5">
+        <CardMap cards={makanan} key="makanan" />
+      </div>
+      <h1 className="tipe pt-4">Olahraga</h1>
+      <div class="hasil-layout gap-4 mt-lg-0 mt-2 mb-5">
+        <CardMap cards={olahraga} key="olahraga" />
+      </div>
     </div>
   );
 };
@@ -85,8 +97,14 @@ const TinggiKalori = () => {
   return (
     <div className="container hasil-hitung">
       <Tinggi />
-      <CardMap cards={makanan} key="makanan" />
-      <CardMap cards={olahraga} key="olahraga" />
+      <h1 className="tipe">Makanan</h1>
+      <div class="hasil-layout gap-4 mt-lg-0 mt-2 mb-5">
+        <CardMap cards={makanan} key="makanan" />
+      </div>
+      <h1 className="tipe pt-4">Olahraga</h1>
+      <div class="hasil-layout gap-4 mt-lg-0 mt-2 mb-5">
+        <CardMap cards={olahraga} key="olahraga" />
+      </div>
     </div>
   );
 };

@@ -82,7 +82,7 @@ function Login() {
     const token = localStorage.getItem("token");
     if (token) {
       dispatch(setLoginStatus(true));
-      navigate("/edukasi");
+      navigate("/");
     }
   }, []);
 

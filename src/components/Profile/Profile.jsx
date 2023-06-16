@@ -38,45 +38,46 @@ const ProfilePage = () => {
   };
 
   return (
-    <Container>
-      <h1>Profile</h1>
-      <Row className="mt-4 justify-content-center">
-        <Col md={5}>
-          <Card>
-            <div className="text-center">
-              <Card.Img
-                variant="top"
-                src={imageProfile}
-                alt="Profile"
-                className="profile-image rounded-circle"
-                style={{ width: "150px", height: "150px" }}
-              />
-            </div>
-            <Card.Body>
-              <div className="text-center">
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>Email: {email}</Card.Text>
+    <div className="profile-page">
+      <Container>
+        <Row className="mt-4 justify-content-center">
+          <Col md={5}>
+            <Card className=" py-5">
+              <div className="text-center ">
+                <Card.Img
+                  variant="top"
+                  src={imageProfile}
+                  alt="Profile"
+                  className="profile-image rounded-circle"
+                  style={{ width: "150px", height: "150px" }}
+                />
               </div>
-              <div className="d-flex justify-content-center">
-                <Link to="/account">
-                  <Button variant="primary">Account</Button>
-                </Link>
-              </div>
-              <div className="d-flex justify-content-center">
-                <Link to="/schedule">
-                  <Button variant="primary">Schedule</Button>
-                </Link>
-              </div>
-              <div className="d-flex justify-content-center">
-                <Button variant="secondary" onClick={handleLogout}>
-                  Logout
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+              <Card.Body>
+                <div className="text-center">
+                  <Card.Title>{name}</Card.Title>
+                  <Card.Text>Email: {email}</Card.Text>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <Link to="/account">
+                    <Button variant="primary">Account</Button>
+                  </Link>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <Link to="/schedule">
+                    <Button variant="primary">Schedule</Button>
+                  </Link>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <Button variant="red" onClick={handleLogout}>
+                    Logout
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

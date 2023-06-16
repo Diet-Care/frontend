@@ -14,8 +14,9 @@
   align-items: center;
   display: flex;
 }
-.text {
+.header-session .text {
   z-index: 2;
+  padding: 0!important;
 }
 
 .text h1 {

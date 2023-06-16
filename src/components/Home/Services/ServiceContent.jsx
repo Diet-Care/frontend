@@ -14,14 +14,14 @@ const ServiceContent = () => {
               deskripsi="Memberikan informasi dan dukungan diet yang dibutuhkan."
             />
           </NavLink>
-          <NavLink to="/#makanan" className="col">
+          <NavLink to="/edukasi" className="col">
             <Service
               icon="fa-solid fa-utensils"
               title="Rekomendasi Makanan"
               deskripsi="Makanan sehat dapat meningkatkan kesehatan tubuh."
             />
           </NavLink>
-          <NavLink to="#olahraga" className="col">
+          <NavLink to="/edukasi" className="col">
             <Service
               icon="fa-solid fa-dumbbell"
               title="Rekomendasi Olahraga"

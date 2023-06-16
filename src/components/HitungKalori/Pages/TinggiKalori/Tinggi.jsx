@@ -1,10 +1,9 @@
-import React from "react";
+import "../../../../style/home-card.css";
 
 const Tinggi = () => {
   return (
-    <div>
-      <h2>Rekomendasi Diet TInggi Kalori</h2>
-      {/* Tambahkan konten atau komponen lain yang sesuai */}
+    <div className="container">
+      <h1 className="rekomendasi-kalori">Rekomendasi Diet TInggi Kalori</h1>
     </div>
   );
 };

@@ -7,7 +7,7 @@ function AboutUs() {
     <>
       <section className="header-session">
         <div className="banner">
-          <div className="content">
+          <div className="content container">
             <div className="text">
               <h1>
                 KAMI PERCAYA TUBUH YANG SEHAT. <br></br>MEMBUTUHKAN MAKANAN YANG

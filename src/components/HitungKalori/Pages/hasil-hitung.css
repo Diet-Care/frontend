@@ -1,3 +1,16 @@
 .hasil-hitung{
     padding: 100px;
 }
+
+.hasil-layout{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* mengatur 4 kolom dengan lebar yang sama */
+  gap: 10px;
+  width: 100%;
+}
+h1.tipe{
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 600;
+}
