@@ -33,10 +33,10 @@ const Navigation = () => {
         }
       );
       const loggedInUser = response.data.data.find(
-        (user) => user.email === token
+        (user) => user.name === user.name
       );
       if (loggedInUser) {
-        setUserName(loggedInUser.uuid);
+        setUserName(loggedInUser.name);
       }
     } catch (error) {
       console.log(error);
@@ -56,7 +56,8 @@ const Navigation = () => {
               height={25}
             />
           </Navbar.Brand>
-          <Navbar.Toggle className="toggle"
+          <Navbar.Toggle
+            className="toggle"
             aria-controls="navbarScroll"
             children={<i class="fa-solid fa-bars"></i>}
           />
@@ -99,17 +100,13 @@ const Navigation = () => {
             >
               Contact
             </NavLink>
-            <NavLink to="/admin" activeClassName="active" className="nav-link">
-              Admin
-            </NavLink>
           </Nav>
           <Nav className="col py-lg-0 py-3 sign d-flex justify-content-lg-end justify-content-center align-items-center gap-2">
             {isLoggedIn ? (
               <NavLink to="/profile" className="profile-link">
-                <Button variant="primary">
+                <div className="profile-wrapper">
                   <CgProfile />
-                  {userName ? userName : "Profile"}
-                </Button>
+                </div>
               </NavLink>
             ) : (
               <>

@@ -113,7 +113,7 @@ function EditMakanan() {
           <div className="form-group">
             <label htmlFor="jumlah-kalori">Jumlah Kalori:</label>
             <input
-              type="number"
+              type="text"
               id="jumlah-kalori"
               value={jumlahKalori}
               onChange={(e) => setJumlahKalori(e.target.value)}

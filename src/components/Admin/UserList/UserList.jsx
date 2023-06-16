@@ -40,7 +40,7 @@ const UserList = () => {
       <ul>
         {updatedUsers.map((user) => (
           <li key={user.uuid}>
-            {user.name} {user.uuid}
+            {user.name} {user.role}
             <button onClick={() => handleUserDelete(user.uuid)}>Delete</button>
           </li>
         ))}

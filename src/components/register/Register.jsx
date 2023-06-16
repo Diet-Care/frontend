@@ -2,12 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import "./styleRegister/register.css";
 import { useState } from "react";
 import { regis } from "../../redux/actionRegister/actionRegister";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const { isLoading, error } = useSelector((state) => state.registerReducer);
   const [inputEmail, setInputEmail] = useState("");
   const [inputName, setInputName] = useState("");
   const [inputPassword, setInputPassword] = useState("");
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -30,6 +32,9 @@ function Register() {
     setInputName("");
     setInputEmail("");
     setInputPassword("");
+
+    // Arahkan pengguna ke halaman login setelah registrasi berhasil
+    navigate("/login");
   };
 
   return (
@@ -47,21 +52,21 @@ function Register() {
                     className="img-logo mb-lg-5 mb-4 mx-auto"
                   />
                   <form onSubmit={handleSubmit} action="add-data">
-                    Name{" "}
+                    <label htmlFor="Name">Name </label>
                     <input
                       type="text"
                       id="name"
                       value={inputName}
                       onChange={handleNameChange}
                     />
-                    Email{" "}
+                    <label htmlFor="email">Email</label>{" "}
                     <input
                       type="email"
                       id="email"
                       value={inputEmail}
                       onChange={handleEmailChange}
                     />
-                    Password{" "}
+                    <label htmlFor="password">Password</label>{" "}
                     <input
                       type="password"
                       id="password"

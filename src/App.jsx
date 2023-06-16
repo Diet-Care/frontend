@@ -1,17 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import HomePage from "./pages/HomePage";
-import DetailsPageDiet from "./components/Details Page/DetailsPage";
+import DetailsPageDiet from "./components/DetailsPage/DetailsPage";
 import PageOlahragaAll from "./pages/PageOlahragaAll";
 import PageMakananAll from "./pages/PageMakananAll";
-
 import Contact from "./pages/Contact";
 import EditMakanan from "./components/Admin/EditData/EditMakanan";
 import EditOlahraga from "./components/Admin/EditData/EditOlahraga";
-
 import Footer from "./components/Footer";
 import HitungKaloriPage from "./pages/HitungKaloriPage";
 import EdukasiPage from "./pages/EdukasiPage";
-
 import Login from "./components/login/Login";
 import Navigation from "./components/Navigation";
 import AboutUs from "./pages/AboutUsPage";
@@ -25,6 +24,7 @@ import Admin from "./components/Admin/Admin";
 import ProfilePage from "./pages/ProfilePage";
 import AccountPage from "./pages/AccountPage";
 import ChangePassword from "./components/ChangePassword/ChangePassword";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/hitung-kalori" element={<HitungKaloriPage />} />
+        <Route path="/hitung-kalori" element={<PrivateRoute />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

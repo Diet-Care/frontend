@@ -18,4 +18,7 @@
 .row {
   --bs-gutter-x: 0 !important;
 }
+.admin-wrapper{
+  z-index: 999;
+}
 

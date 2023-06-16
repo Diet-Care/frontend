@@ -42,7 +42,7 @@ function EditMakanan() {
 
   const handleSave = async () => {
     try {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem("token");
       const formData = new FormData();
       formData.append("judul", judul);
       formData.append("deskripsi_singkat", deskripsi_singkat);
@@ -118,7 +118,7 @@ function EditMakanan() {
           <div className="form-group">
             <label htmlFor="jumlah-kalori">Jumlah Kalori:</label>
             <input
-              type="number"
+              type="text"
               id="jumlah-kalori"
               value={jumlahKalori}
               onChange={(e) => setJumlahKalori(e.target.value)}

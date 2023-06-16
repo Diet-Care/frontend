@@ -23,8 +23,14 @@ export const fetchUsersFailure = (error) => {
 export const fetchUsers = () => {
   return (dispatch) => {
     dispatch(fetchUsersRequest());
+    const token = localStorage.getItem("token"); // Get the token from local storage
+
     axios
-      .get("https://backend-production-2c47.up.railway.app/users")
+      .get("https://backend-production-2c47.up.railway.app/users", {
+        headers: {
+          Authorization: `Bearer ${token}`, // Include the authorization token in the request headers
+        },
+      })
       .then((response) => {
         dispatch(fetchUsersSuccess(response.data.data));
       })
@@ -33,6 +39,7 @@ export const fetchUsers = () => {
       });
   };
 };
+
 
 export const deleteUserRequest = () => {
   return {

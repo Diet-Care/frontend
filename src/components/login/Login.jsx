@@ -13,6 +13,8 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -23,10 +25,13 @@ function Login() {
   };
 
   const handleRegister = () => {
-    Navigate("/register");
+    navigate("/register");
   };
 
   const handleLogin = async () => {
+    setIsLoading(true);
+    setError("");
+
     try {
       const response = await axios.post(
         "https://backend-production-2c47.up.railway.app/login",
@@ -36,13 +41,39 @@ function Login() {
         }
       );
 
+      const token = response.data.token;
       // Store the token in local storage
-      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("token", token);
 
-      dispatch(setLoginStatus(true));
-      navigate("/edukasi");
+      // Fetch user data to check role
+      let user;
+      try {
+        const userResponse = await axios.get(
+          "https://backend-production-2c47.up.railway.app/users",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        user = userResponse.data.data.find((user) => user.email === email);
+      } catch (error) {
+        console.error(error);
+      }
+
+      if (user && user.role === "admin") {
+        dispatch(setLoginStatus(true));
+        navigate("/admin");
+      } else {
+        dispatch(setLoginStatus(true));
+        navigate("/edukasi");
+      }
     } catch (error) {
       console.error(error);
+      setError("Invalid email or password. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -88,14 +119,21 @@ function Login() {
                       onChange={handlePasswordChange}
                     />
                   </div>
-                  <Button variant="primary" type="submit" onClick={handleLogin}>
-                    Login
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    onClick={handleLogin}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Loading..." : "Login"}
                   </Button>
-                  <NavLink to="/register" className="signup">
-                    <Button variant="secondary" type="submit">
+                  {error && <span className="error-message">{error}</span>}
+                  <div className="register-wrapper">
+                    <p className="r">Belum Punya Akun?</p>
+                    <NavLink to="/register" className="signup">
                       Register
-                    </Button>
-                  </NavLink>
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>

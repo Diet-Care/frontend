@@ -34,42 +34,45 @@ function Admin() {
   };
 
   return (
-    <div className="wrapper py-5">
-      <div className="row py-5">
-        <div className="col-md-2 menu-wrapper">
-          <div className="  border-right" id="sidebar-wrapper">
-            <div className="dica-logo p-4">
-              <img
-                src="https://i.ibb.co/FzRc6JC/logo-primary.png"
-                alt="logo-primary"
-                border="0"
-                width="75%"
-              />
-            </div>
-            <div className="list-group list-group-flush">
-              {menuItems.map((item) => (
-                <button
-                  key={item.id}
-                  className={`admin-menu ${
-                    activeMenu === item.title ? "active" : ""
-                  }`}
-                  onClick={() => handleMenuClick(item.title)}
-                >
-                  {item.title}
-                </button>
-              ))}
+    <div className="admin-wrapper py-5">
+      <div className="wrapper py-5
+">
+        <div className="row">
+          <div className="col-md-2 menu-wrapper">
+            <div className="  border-right" id="sidebar-wrapper">
+              <div className="dica-logo p-4">
+                <img
+                  src="https://i.ibb.co/FzRc6JC/logo-primary.png"
+                  alt="logo-primary"
+                  border="0"
+                  width="75%"
+                />
+              </div>
+              <div className="list-group list-group-flush">
+                {menuItems.map((item) => (
+                  <button
+                    key={item.id}
+                    className={`admin-menu ${
+                      activeMenu === item.title ? "active" : ""
+                    }`}
+                    onClick={() => handleMenuClick(item.title)}
+                  >
+                    {item.title}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-md-2"></div>
-        <div className="col item-component" style={{ overflowY: "auto" }}>
-          {menuItems.map((item) =>
-            activeMenu === item.title ? (
-              <div key={item.id} className="col-md-12">
-                {item.component}
-              </div>
-            ) : null
-          )}
+          <div className="col-md-2"></div>
+          <div className="col item-component" style={{ overflowY: "auto" }}>
+            {menuItems.map((item) =>
+              activeMenu === item.title ? (
+                <div key={item.id} className="col-md-12">
+                  {item.component}
+                </div>
+              ) : null
+            )}
+          </div>
         </div>
       </div>
     </div>
