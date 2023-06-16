@@ -14,6 +14,7 @@ function Edit() {
   }, []);
 
   const fetchData = async () => {
+    
     try {
       const response = await fetch(
         `https://backend-production-2c47.up.railway.app/makanan/${uuid}`
@@ -38,12 +39,16 @@ function Edit() {
       formData.append("deskripsi_singkat", deskripsi_singkat);
       formData.append("deskripsi_lengkap", deskripsi_lengkap);
       formData.append("img", img);
-
+      const token = localStorage.getItem('token');
+      
       const response = await fetch(
         `https://backend-production-2c47.up.railway.app/makanan/${uuid}`,
         {
           method: "PUT",
           body: formData,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
 

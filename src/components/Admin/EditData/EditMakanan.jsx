@@ -42,6 +42,9 @@ function EditMakanan() {
 
   const handleSave = async () => {
     try {
+      //ambil token
+      const token = localStorage.getItem('token');
+
       const formData = new FormData();
       formData.append("judul", judul);
       formData.append("deskripsi_singkat", deskripsi_singkat);
@@ -56,6 +59,9 @@ function EditMakanan() {
         {
           method: "PUT",
           body: formData,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
 

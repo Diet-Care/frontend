@@ -53,11 +53,15 @@ function InputForm() {
     formData.append("img", img);
     formData.append("jumlah_kalori", jumlahKalori);
     formData.append("level", level);
-
+    // mengambil token dari localstorage
+    const token = localStorage.getItem('token');
     try {
       const response = await fetch(url, {
         method: "POST",
         body: formData,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
 
       const result = await response.json();
