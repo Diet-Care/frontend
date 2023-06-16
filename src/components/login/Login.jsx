@@ -37,8 +37,8 @@ function Login() {
       );
 
       // Store the token in local storage
-      localStorage.setItem("token", response.data.data);
-      console.log(response.data.data);
+      localStorage.setItem("token", response.data.token);
+
       dispatch(setLoginStatus(true));
       navigate("/edukasi");
     } catch (error) {

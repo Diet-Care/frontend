@@ -41,7 +41,7 @@ function DataList({ url, category }) {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      });
+      })
       console.log(token);
       console.log(response);
       if (response.ok) {
